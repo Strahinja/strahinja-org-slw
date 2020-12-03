@@ -1,0 +1,30 @@
+site-name: //strahinja.org
+site-desc: Лична страница Страхиње Радића
+stylesheet: css/index.css
+stylesheet: css/fonts.css
+---
+{include "header"}
+{div.splash centered}{.content}
+# Лична страница Страхиње Радића
+{/.content}{/div}
+{.splash-toolbar}
+{include "index-toolbar"}
+{/.splash-toolbar}
+{main}
+{.content}
+
+## Добродошли!
+
+Овај сајт је замишљен као колекција мојих радова, презентација моје радне
+биографије и пословни портфолио. Сајт је још увек у изградњи, па неке могућности
+још нису додате или нису функционалне.  Молим за стрпљење, јер је време које
+могу да посветим изради овог сајта веома ограничено.
+
+
+## Портфолио
+
+Пројекти на којима сам радио
+{/.content}
+{/main}
+{include "footer"}
+

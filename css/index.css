@@ -1,0 +1,245 @@
+html,
+html *,
+body,
+body *
+{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+    line-height: 2em;
+}
+
+html,
+body
+{
+    background-color: #121212;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, p
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: transparent;
+}
+
+h1, h2, h3, h4
+{
+    padding-bottom: 1em;
+    line-height: 1.1em;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+h1
+{
+    font-size: 200%;
+}
+
+h2
+{
+    font-size: 130%;
+}
+
+h3
+{
+    font-size: 120%;
+}
+
+h4
+{
+    font-size: 110%;
+}
+
+p
+{
+    padding-bottom: 1em;
+}
+
+a
+{
+    color: #fff;
+}
+
+#made-by
+{
+    background-color: transparent;
+    font-size: 80%;
+    padding: 1rem 2rem;
+}
+
+#made-by > a
+{
+    font-size: 1em;
+}
+
+header,
+header>.content
+{
+    background: #272927;
+    color: #fff;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+}
+
+main
+{
+    display: inline-flex;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+
+main > h1,
+main > h2,
+main > h3,
+main > h4,
+main > p
+{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header>.content,
+main>.content,
+footer>.content
+{
+    display: block;
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header a
+{
+    display: inline-block;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-weight: 700;
+    background: transparent;
+    text-decoration: none;
+    padding: .5em 2em;
+}
+
+header a:hover
+{
+    background: #fff;
+    color: #121212;
+    transition: all .5s ease-in-out;
+}
+
+footer
+{
+    display: inline-flex;
+    background-color: #233223;
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.splash
+{
+    background-color: #1d201d;
+    min-height: 10em;
+    flex-direction: row;
+    display: flex;
+}
+
+.splash > .content
+{
+    background-color: transparent;
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.splash h1
+{
+    padding-bottom: 0;
+}
+
+.splash-toolbar
+{
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.splash-toolbar > .content
+{
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.splash-toolbar a
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 2em;
+    line-height: 2em;
+    padding: .6em 1em;
+    margin: 0 .5em;
+    border-radius: 2em;
+    background-color: #374537;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .3ex;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+}
+
+.splash-toolbar a::before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.1);
+    opacity: 0.0;
+    border-radius: 2em;
+}
+
+.splash-toolbar a:hover::before
+{
+    opacity: 0.8;
+}
+
+.splash-toolbar a>svg
+{
+    vertical-align: middle;
+    margin-right: 1ex;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+@media (max-width: 600px)
+{
+.splash-toolbar a>svg
+{
+    margin: 0;
+}
+
+.splash-toolbar a>span
+{
+    display: none;
+}
+}
+

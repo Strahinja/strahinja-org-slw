@@ -1,0 +1,8 @@
+*~
+*.bak
+*.orig
+*.rej
+*.swp
+*.html
+nohup.out
+

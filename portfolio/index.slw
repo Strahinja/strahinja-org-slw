@@ -1,0 +1,22 @@
+page-title: Портфолио
+page-desc: Списак мојих радова
+stylesheet: ../css/index.css
+stylesheet: ../css/fonts.css
+---
+{include "../header"}
+{.splash}{.content}
+# Портфолио
+{/.content}{/.splash}
+{main}
+{.content}
+
+Колекција мојих радова
+
+{include "carvisor"}
+{include "eauto"}
+{include "sumf"}
+
+{/.content}
+{/main}
+{include "../footer"}
+
