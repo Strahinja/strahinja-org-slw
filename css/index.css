@@ -87,6 +87,8 @@ header>.content
 header
 {
     display: flex;
+    min-height: 2rem;
+    flex-shrink: 0;
     flex-direction: row;
     z-index: 1;
     box-shadow: 0 5px 5px rgba(0,0,0,.1);
@@ -94,9 +96,14 @@ header
 
 main
 {
-    display: inline-flex;
+    /*
+     *display: flex;
+     *flex-grow: 1;
+     */
     padding: 2rem 0;
-    flex-direction: column;
+    /*
+     *flex-direction: column;
+     */
 }
 
 main > h1,
@@ -141,7 +148,9 @@ header a:hover
 
 footer
 {
-    display: inline-flex;
+    display: flex;
+    min-height: 2rem;
+    flex-shrink: 0;
     background-color: #233223;
     margin-top: auto;
     flex-direction: column;
@@ -228,6 +237,67 @@ footer
 .centered
 {
     text-align: center;
+}
+
+ul.dir
+{
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+ul.dir>li
+{
+    display: block;
+    margin-right: 1em;
+    list-style: none;
+}
+
+details>summary
+{
+    list-style: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+details>summary::-webkit-details-marker
+{
+    display: none;
+}
+
+details>summary>svg
+{
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    transform-origin: center;
+    transition: all .25s ease;
+}
+
+details>div
+{
+    opacity: 0.0;
+}
+
+details[open]>summary>svg
+{
+    transform: rotateZ(90deg);
+}
+
+
+@keyframes reveal {
+    0 {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+details[open]>div
+{
+    line-height: 1em;
+    animation: reveal 1s forwards;
 }
 
 @media (max-width: 600px)

@@ -1,5 +1,5 @@
 SLW = slweb
-SLW_DIRS = . portfolio
+SLW_DIRS = . blog portfolio
 SLW_FILES = $(addsuffix /index.slw,$(SLW_DIRS))
 HTML_FILES = $(SLW_FILES:.slw=.html)
 
