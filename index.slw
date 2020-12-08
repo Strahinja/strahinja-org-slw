@@ -24,6 +24,7 @@ stylesheet: css/fonts.css
 ## Портфолио
 
 Пројекти на којима сам радио
+
 {/.content}
 {/main}
 {include "footer"}

@@ -58,6 +58,13 @@ h4
 p
 {
     padding-bottom: 1em;
+}
+
+blockquote
+{
+    margin-left: 2em;
+    border-left: .5em solid #212121;
+    padding-left: 1em;
     overflow-x: auto;
     max-width: 100%;
 }
