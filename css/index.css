@@ -21,7 +21,7 @@ body
     flex-direction: column;
 }
 
-h1, h2, h3, h4, p
+h1, h2, h3, h4, p, pre
 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -58,11 +58,39 @@ h4
 p
 {
     padding-bottom: 1em;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+details ::-webkit-scrollbar
+{
+    background: transparent;
+    width: .5rem;
+    height: .5rem;
+}
+
+details ::-webkit-scrollbar-track
+{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+details ::-webkit-scrollbar-thumb
+{
+    background: #fff;
+    border: none;
+    border-radius: .25rem;
 }
 
 a
 {
     color: #fff;
+}
+
+pre, code
+{
+    font-family: 'PxPlus IBM VGA8 for Powerline';
 }
 
 #made-by
@@ -87,6 +115,8 @@ header>.content
 header
 {
     display: flex;
+    position: fixed;
+    width: 100%;
     min-height: 2rem;
     flex-shrink: 0;
     flex-direction: row;
@@ -104,6 +134,11 @@ main
     /*
      *flex-direction: column;
      */
+}
+
+header + main
+{
+    margin-top: 2rem;
 }
 
 main > h1,
@@ -162,6 +197,7 @@ footer
     min-height: 10em;
     flex-direction: row;
     display: flex;
+    margin-top: 2rem;
 }
 
 .splash > .content
@@ -241,7 +277,7 @@ footer
 
 ul.dir
 {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     margin-left: 0;
 }

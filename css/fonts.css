@@ -102,3 +102,14 @@
        url('../fonts/fira-sans-extra-condensed-v4-latin_cyrillic-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/fira-sans-extra-condensed-v4-latin_cyrillic-700italic.svg#FiraSansExtraCondensed') format('svg'); /* Legacy iOS */
 }
+
+@font-face {
+    font-family: 'PxPlus IBM VGA8 for Powerline';
+    src: local('PxPlus IBM VGA8 for Powerline'),
+	local('PxPlus_IBM_VGA8_for_Powerline'),
+	url('../fonts/PxPlus_IBM_VGA8_for_Powerline.woff2') format('woff2'),
+	url('../fonts/PxPlus_IBM_VGA8_for_Powerline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
