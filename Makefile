@@ -1,17 +1,30 @@
 SLW = slweb
-SLW_DIRS = . blog portfolio
-SLW_FILES = $(addsuffix /index.slw,$(SLW_DIRS))
+SUBDIRS = blog portfolio
+SLW_FILES = $(addsuffix /index.slw,.)
+#SLW_DIRS = $(SLW_DIRS) $(wildcard blog/*-*)
+#SLW_FILES = $(SLW_FILES) $(wildcard blog/*-*/*.slw)
 HTML_FILES = $(SLW_FILES:.slw=.html)
 
 %.html: %.slw
 	$(SLW) $< > $@
 
-all: $(HTML_FILES)
+all: $(HTML_FILES) subdirs
+
+subdirs: $(SUBDIRS)
+
+$(SUBDIRS):
+	$(MAKE) -C $@
 
 rebuild: clean all
 
-clean:
-	rm -f $(HTML_FILES) 2>/dev/null
+subdirsclean:
+	for d in $(SUBDIRS); do \
+		$(MAKE) -C $$d clean; \
+		$(MAKE) -C $$d; \
+	done
 
-.PHONY: rebuild clean
+clean: subdirsclean
+	$(RM) -f $(HTML_FILES) 2>/dev/null
+
+.PHONY: rebuild clean subdirs $(SUBDIRS) subdirsclean
 

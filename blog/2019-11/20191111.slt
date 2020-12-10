@@ -1,0 +1,9 @@
+stylesheet: ../../css/index.css
+stylesheet: ../../css/fonts.css
+---
+{include "../../header"}
+{main}{.content}
+{include "20191111"}
+{/.content}{/main}
+{include "../../footer"}
+
