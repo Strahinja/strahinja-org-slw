@@ -19,12 +19,11 @@ rebuild: clean all
 
 subdirsclean:
 	for d in $(SUBDIRS); do \
-		$(MAKE) -C $$d clean; \
-		$(MAKE) -C $$d; \
+		$(MAKE) -C $$d rebuild; \
 	done
 
 clean: subdirsclean
-	$(RM) -f $(HTML_FILES) 2>/dev/null
+	$(RM) $(HTML_FILES) 2>/dev/null
 
 .PHONY: rebuild clean subdirs $(SUBDIRS) subdirsclean
 

@@ -26,6 +26,6 @@ $(HTML_TMPL_FILES): $(TMPL_FILES) $(TEMPLATE_FILE)
 rebuild: clean all
 
 clean:
-	$(RM) -f $(HTML_FILES) $(TMPL_FILES) $(HTML_TMPL_FILES) 2>/dev/null
+	$(RM) $(HTML_FILES) $(TMPL_FILES) $(HTML_TMPL_FILES) 2>/dev/null
 
-.PHONY: rebuild clean
+.PHONY: rebuild clean 

@@ -11,7 +11,7 @@ all: $(HTML_FILES)
 rebuild: clean all
 
 clean:
-	rm -f $(HTML_FILES) 2>/dev/null
+	$(RM) $(HTML_FILES) 2>/dev/null
 
 .PHONY: rebuild clean 
 
