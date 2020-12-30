@@ -11,7 +11,7 @@ stylesheet: ../css/fonts.css
 {/=chevron}
 
 {main}{.content}
-{lsdirs =chevron}
+{incdir =chevron}
 {/.content}{/main}
 
 {include "../footer"}

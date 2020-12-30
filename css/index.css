@@ -282,14 +282,14 @@ footer
     text-align: center;
 }
 
-ul.dir
+ul.incdir
 {
     display: flex;
     flex-direction: column;
     margin-left: 0;
 }
 
-ul.dir>li
+ul.incdir>li
 {
     display: block;
     margin-right: 1em;

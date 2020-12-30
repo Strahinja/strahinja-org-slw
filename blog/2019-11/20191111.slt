@@ -1,8 +1,11 @@
+---
 stylesheet: ../../css/index.css
 stylesheet: ../../css/fonts.css
+title-heading-level: 1
 ---
 {include "../../header"}
 {main}{.content}
+{p}[Назад на листу чланака](../../index.html){/p}
 {include "20191111"}
 {/.content}{/main}
 {include "../../footer"}
