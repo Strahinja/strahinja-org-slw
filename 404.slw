@@ -1,0 +1,21 @@
+---
+site-name: 404: Није пронађено //strahinja.org
+stylesheet: /css/index.css
+stylesheet: /css/fonts.css
+---
+{include "header"}
+{.splash}{.content}
+# 404: Није пронађено
+{/.content}{/.splash}
+{main}
+{.content}
+
+Страница тренутно није доступна или је УРЛ који сте унели погрешан.  
+Проверите УРЛ или покушајте поново касније.
+
+Можете се и вратити на [почетну страницу](/).
+
+{/.content}
+{/main}
+{include "footer"}
+

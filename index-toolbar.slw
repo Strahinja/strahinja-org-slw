@@ -15,8 +15,8 @@
 </svg>
 {/=console}
 
-[=palette (Портфолио)](portfolio/index.html)
-[=pen (Блог)](blog/index.html)
-[=console (Програми)](programi/index.html)
+[=palette (Портфолио)](/portfolio)
+[=pen (Блог)](/blog)
+[=console (Програми)](/programi)
 {/.content}
 

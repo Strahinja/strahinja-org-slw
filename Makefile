@@ -1,6 +1,6 @@
 SLW = slweb
 SUBDIRS = blog portfolio
-SLW_FILES = $(addsuffix /index.slw,.)
+SLW_FILES = $(addsuffix /index.slw,.) 404.slw
 #SLW_DIRS = $(SLW_DIRS) $(wildcard blog/*-*)
 #SLW_FILES = $(SLW_FILES) $(wildcard blog/*-*/*.slw)
 HTML_FILES = $(SLW_FILES:.slw=.html)

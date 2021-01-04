@@ -61,11 +61,11 @@ export default({ app }, inject) =>
 Сада једноставно могу да у оквиру компоненте странице напишем:
 
 ```
-<template lang="pug">
+&lt;template lang="pug">
     static-markdown(:markdown="markdown")
-</template>
+&lt;/template>
 
-<script>
+&lt;script>
 import StaticMarkdown from '~/components/StaticMarkdown';
 export default {
     name: 'Koord',
@@ -89,7 +89,7 @@ export default {
         };
     }
 };
-</script>
+&lt;/script>
 
 ```
 

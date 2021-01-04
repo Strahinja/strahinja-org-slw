@@ -17,7 +17,8 @@ HTML_TMPL_FILES = $(TMPL_FILES:.slt=.html)
 	$(SLW) $<  > $@
 
 %.slt: %.slw $(TEMPLATE_FILE)
-	$(CAT)	$(TEMPLATE_FILE) | $(SED) -e "s#%FILENAME%#$(basename $(notdir $<))#g" > $@
+	$(CAT)	$(TEMPLATE_FILE) | $(SED) -e "s#%BASEDIR%#blog/$(basename \
+		$(dir $<))#g" -e "s#%FILENAME%#$(basename $(notdir $<))#g" > $@
 
 all: $(HTML_FILES) $(TMPL_FILES) $(HTML_TMPL_FILES)
 

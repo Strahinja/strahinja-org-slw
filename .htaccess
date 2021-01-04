@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    ErrorDocument 404 /404.html
+
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^/?portfolio/?$ /portfolio/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^/?blog/([^/]+)/([^/]+)/?$ /blog/$1/$2.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^/?blog/([^/]+)/?$ /blog/$1/index.html [L]
+
+    RewriteRule ^/?blog/?$ /blog/index.html [L]
+</IfModule>
+

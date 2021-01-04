@@ -3,11 +3,8 @@ html *,
 body,
 body *
 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14pt;
     margin: 0;
     padding: 0;
-    line-height: 2em;
 }
 
 html,
@@ -15,6 +12,9 @@ body
 {
     background-color: #121212;
     color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14pt;
+    line-height: 2em;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -30,7 +30,8 @@ h1, h2, h3, h4, p, pre
 
 h1, h2, h3, h4
 {
-    padding-bottom: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
     line-height: 1.1em;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
@@ -92,24 +93,20 @@ details ::-webkit-scrollbar-thumb
 
 a
 {
-    color: #fff;
+    color: #687668;
 }
 
 pre, code
 {
     font-family: 'PxPlus IBM VGA8 for Powerline';
+    line-height: 1rem;
 }
 
 #made-by
 {
     background-color: transparent;
     font-size: 80%;
-    padding: 1rem 2rem;
-}
-
-#made-by > a
-{
-    font-size: 1em;
+    padding: .5rem 2rem 1rem 2rem;
 }
 
 header,
@@ -124,7 +121,8 @@ header
     display: flex;
     position: fixed;
     width: 100%;
-    min-height: 2rem;
+    min-height: 3rem;
+    white-space: nowrap;
     flex-shrink: 0;
     flex-direction: row;
     z-index: 1;
@@ -143,9 +141,9 @@ main
      */
 }
 
-header + main
+#top + main
 {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 main > h1,
@@ -156,6 +154,12 @@ main > p
 {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+main>.content,
+main>.content p
+{
+    line-height: 2em;
 }
 
 header>.content,
@@ -173,6 +177,7 @@ footer>.content
 
 header a
 {
+    color: #fff;
     display: inline-block;
     font-family: "Fira Sans Extra Condensed", sans-serif;
     font-weight: 700;
@@ -185,7 +190,23 @@ header a:hover
 {
     background: #fff;
     color: #121212;
-    transition: all .5s ease-in-out;
+    /*transition: all .5s ease-in-out;*/
+}
+
+header>.right
+{
+    width: 3rem;
+    align-self: center;
+}
+
+header>.right>a
+{
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
 }
 
 footer
@@ -196,6 +217,24 @@ footer
     background-color: #233223;
     margin-top: auto;
     flex-direction: column;
+    font-size: 80%;
+}
+
+footer>.content
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+}
+
+.license
+{
+    padding: 1rem 2rem .5rem 2rem;
+}
+
+.license>p
+{
+    padding: 0;
 }
 
 .splash
@@ -238,6 +277,7 @@ footer
 
 .splash-toolbar a
 {
+    color: #fff;
     display: flex;
     position: relative;
     align-items: center;
@@ -327,6 +367,62 @@ details[open]>summary>svg
     transform: rotateZ(90deg);
 }
 
+details>div>h2
+{
+    padding-bottom: 0;
+    padding-top: .5em;
+}
+
+.heading-link,
+a.timestamp
+{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: .5rem;
+    font-size: 80%;
+}
+
+.heading-link>a,
+a.timestamp
+{
+    text-decoration: none;
+    font-size: 80%;
+}
+
+.heading-link>a
+{
+    color: #fff;
+    font-size: 100%;
+}
+
+a.timestamp
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.heading-link.back-arrow
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.heading-link.back-arrow::before
+{
+    content: '⯇';
+    display: block;
+    position: absolute;
+    margin-left: -1em;
+    width: 1em;
+}
+
+a.timestamp>svg
+{
+    width: .75em !important;
+    height: .75em !important;
+    vertical-align: middle;
+}
 
 @keyframes reveal {
     0 {

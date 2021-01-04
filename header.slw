@@ -1,6 +1,10 @@
 {header}
 {.content}
-[//strahinja.org](index.html)
+[//strahinja.org](/)
 {/.content}
+{.right}
+[▲](#top)
+{/.right}
 {/header}
+{a#top}{/a}
 
