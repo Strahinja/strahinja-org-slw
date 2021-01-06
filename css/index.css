@@ -282,6 +282,7 @@ footer>.content
     position: relative;
     align-items: center;
     min-height: 2em;
+    height: 2em;
     line-height: 2em;
     padding: .6em 1em;
     margin: 0 .5em;
@@ -293,6 +294,12 @@ footer>.content
     box-shadow: 0 5px 5px rgba(0,0,0,.1);
 }
 
+.splash-toolbar a:hover
+{
+    height: 2em;
+    line-height: 2em;
+}
+
 .splash-toolbar a::before
 {
     content: ' ';
@@ -302,13 +309,15 @@ footer>.content
     bottom: 0;
     right: 0;
     background-color: rgba(255,255,255,.1);
-    opacity: 0.0;
+    opacity: 0;
     border-radius: 2em;
+    will-change: opacity;
 }
 
 .splash-toolbar a:hover::before
 {
     opacity: 0.8;
+    will-change: opacity;
 }
 
 .splash-toolbar a>svg
@@ -360,6 +369,7 @@ details>summary>svg
 details>div
 {
     opacity: 0.0;
+    will-change: opacity;
 }
 
 details[open]>summary>svg
