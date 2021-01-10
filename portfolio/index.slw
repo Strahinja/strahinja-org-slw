@@ -13,9 +13,19 @@ stylesheet: ../css/fonts.css
 
 Колекција мојих радова
 
-{include "carvisor"}
-{include "eauto"}
-{include "sumf"}
+{csv "portfolio"}
+{.project}
+## $1
+
+$6
+
+[(Отвори)]($4)
+[(Слика екрана)]($5)
+
+**$2-$3**
+
+{/.project}
+{/csv}
 
 {/.content}
 {/main}

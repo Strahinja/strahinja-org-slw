@@ -1,2 +1,2 @@
-redo-ifchange index.html
+redo-ifchange index.html portfolio.csv
 
