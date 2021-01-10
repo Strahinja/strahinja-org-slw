@@ -1,0 +1,4 @@
+# Classify .slt and .slw files as slweb
+*.slt	linguist-language=Slweb
+*.slw	linguist-language=Slweb
+

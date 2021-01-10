@@ -1,0 +1,11 @@
+---
+site-name: Програми //strahinja.org
+stylesheet: ../css/index.css
+stylesheet: ../css/fonts.css
+---
+{include "../header"}
+{.splash}{.content}
+# Програми
+{/.content}{/.splash}
+{include "../footer"}
+
