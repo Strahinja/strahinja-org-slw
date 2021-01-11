@@ -1,5 +1,5 @@
 redo-ifchange template.slw.in
-if [ -r $2.slt ]; then
+if [ "$(dirname $2)" != "." ]; then
     redo-ifchange $2.slt
     slweb $2.slt > $3
 else
