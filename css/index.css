@@ -70,6 +70,27 @@ blockquote
     max-width: 100%;
 }
 
+::-webkit-scrollbar
+{
+    background: #121212;
+    width: 1rem;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #677567;
+    border: .25rem solid #121212;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #fff;
+    border: none;
+    border-radius: 1rem;
+}
+
 details ::-webkit-scrollbar
 {
     background: transparent;
@@ -156,8 +177,8 @@ main > p
     margin: 0 auto;
 }
 
-main>.content,
-main>.content p
+main .content,
+main .content p
 {
     line-height: 2em;
 }
@@ -246,13 +267,25 @@ footer>.content
     margin-top: 2rem;
 }
 
-.splash > .content
+.splash.notfilled
+{
+    background-color: transparent;
+}
+
+.splash>.content
 {
     background-color: transparent;
     max-width: 1024px;
     margin: 0 auto;
     flex-grow: 1;
     align-self: center;
+}
+
+.splash>.content.centered
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .splash h1
@@ -277,8 +310,9 @@ footer>.content
 
 .splash-toolbar a
 {
-    color: #fff;
     display: flex;
+    background-color: #374537;
+    color: #fff;
     position: relative;
     align-items: center;
     min-height: 2em;
@@ -286,8 +320,7 @@ footer>.content
     line-height: 2em;
     padding: .6em 1em;
     margin: 0 .5em;
-    border-radius: 2em;
-    background-color: #374537;
+    border-radius: 1ex;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .3ex;
@@ -310,7 +343,7 @@ footer>.content
     right: 0;
     background-color: rgba(255,255,255,.1);
     opacity: 0;
-    border-radius: 2em;
+    border-radius: 1ex;
     will-change: opacity;
 }
 
@@ -329,6 +362,12 @@ footer>.content
 .centered
 {
     text-align: center;
+}
+
+.vpadded
+{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 ul.incdir
@@ -447,6 +486,81 @@ details[open]>div
 {
     line-height: 1em;
     animation: reveal 1s forwards;
+}
+
+.techlogo
+{
+    display: flex;
+    align-items: center;
+    width: 10em;
+    min-width: 10em;
+    height: 10em;
+    min-height: 10em;
+}
+
+.techlogo>a>img
+{
+    width: 10em;
+    opacity: 0.5;
+    will-change: opacity;
+    transition: opacity .25s ease;
+}
+
+.techlogo>a:hover>img
+{
+    opacity: 1.0;
+}
+
+.slweb
+{
+    filter: invert(46%) sepia(12%) saturate(372%) hue-rotate(71deg) brightness(93%) contrast(92%);
+}
+
+.button-accent
+{
+    margin: 0 2rem;
+}
+
+.button-accent>a
+{
+    display: inline-flex;
+    background-color: #bdcc49;
+    color: #000;
+    position: relative;
+    align-items: center;
+    min-height: 2em;
+    line-height: 2em;
+    padding: .6em 1em;
+    border-radius: 1ex;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .3ex;
+}
+
+.button-accent>a::before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.3);
+    opacity: 0;
+    border-radius: 1ex;
+    will-change: opacity;
+}
+
+.button-accent>a:hover::before
+{
+    opacity: 0.8;
+    will-change: opacity;
+}
+
+.button-accent>a>svg
+{
+    vertical-align: middle;
+    margin-right: 1ex;
 }
 
 @media (max-width: 600px)

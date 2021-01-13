@@ -1,0 +1,82 @@
+.projects 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.project 
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #212121;
+    border-radius: 1ex;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 1.5em 0;
+}
+
+.dates
+{
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+.image
+{
+    width: 20em;
+    min-width: 20em;
+    height: 20em;
+    min-height: 20em;
+    overflow: hidden;
+    margin-left: 1.5em;
+    border-radius: 1ex;
+}
+
+.image>img
+{
+    height: 20em;
+    min-height: 20em;
+    min-width: 20em;
+}
+
+.actions
+{
+    padding: 0 2rem;
+}
+
+.actions>a
+{
+    background-color: #374537;
+    color: #fff;
+    position: relative;
+    padding: .6em 1em;
+    margin: 0 .5em 0 0;
+    border-radius: 1ex;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2ex;
+    font-size: 12pt;
+}
+
+.actions>a::before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.1);
+    opacity: 0;
+    border-radius: 1ex;
+    will-change: opacity;
+}
+
+.actions>a:hover::before
+{
+    opacity: 0.8;
+    will-change: opacity;
+}
+

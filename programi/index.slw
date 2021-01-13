@@ -2,10 +2,32 @@
 site-name: Програми //strahinja.org
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
+stylesheet: ../css/programi.css
 ---
 {include "../header"}
 {.splash}{.content}
 # Програми
 {/.content}{/.splash}
+{main}
+{.content}
+
+{.programs}
+{csv "programi"}
+{.program}
+<a href="$5" target="_blank" class="image" title="$#5: $1">![$1]($5)</a>
+{.description}
+## $1
+
+$6
+
+{.actions}[(Преузми)]($4){/.actions}
+
+{/.description}
+{/.program}
+{/csv}
+{/.programs}
+
+{/.content}
+{/main}
 {include "../footer"}
 
