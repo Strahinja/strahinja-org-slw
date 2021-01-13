@@ -20,7 +20,7 @@ ext-in-permalink: 0
 {/.content}{/.splash}
 
 {main}{.content}
-{incdir "." =chevron}
+{incdir "." 10 =chevron}
 {/.content}{/main}
 
 {include "../footer"}
