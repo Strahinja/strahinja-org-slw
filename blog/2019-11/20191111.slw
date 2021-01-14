@@ -37,11 +37,9 @@ visible: true
 
 Нека одговарајући фајлови садрже следећи код:
 
-<blog-gist filename="index.vue"
-:gist="gist"></blog-gist>
+<blog-gist filename="index.vue" :gist="gist"></blog-gist>
 
-<blog-gist filename="_docid.vue"
-:gist="gist"></blog-gist>
+<blog-gist filename="_docid.vue" :gist="gist"></blog-gist>
 
 Покретањем `nuxt generate` без посебно подешене `generate` секције фајла
 `nuxt.config.js` биће генерисана само основна рута, `/`. Ако приступимо почетној
