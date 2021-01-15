@@ -37,9 +37,51 @@ visible: true
 
 Нека одговарајући фајлови садрже следећи код:
 
-<blog-gist filename="index.vue" :gist="gist"></blog-gist>
+```
+<!--pages/index.vue-->
+<template>
+    <section>
+      <nuxt-link to="/search/first">Search: "first"</nuxt-link>
+      <nuxt-link to="/search/second">Search: "second"</nuxt-link>
+    </section>
+</template>
 
-<blog-gist filename="_docid.vue" :gist="gist"></blog-gist>
+<script>
+export default {
+    name: "Index"
+};
+</script>
+
+<!-- ... -->
+```
+
+```
+<!--pages/search/_docid.vue-->
+<template>
+    <div class="search">
+      <nuxt-link to="/">Back to home</nuxt-link>
+      <p>{{docBodies[documentId]}}</p>
+    </div>
+    <!--doc-->
+</template>
+
+<script>
+export default {
+    name: "Search",
+    asyncData({ params }) {
+      return {
+        documentId: params.docid,
+        docBodies: {
+          first: "First document",
+          second: "Second document"
+        }
+      };
+    }
+};
+</script>
+
+<!-- ... -->
+```
 
 Покретањем `nuxt generate` без посебно подешене `generate` секције фајла
 `nuxt.config.js` биће генерисана само основна рута, `/`. Ако приступимо почетној
@@ -70,9 +112,27 @@ visible: true
 случају када задата рута није статички генерисана. Ово се постиже додавањем
 опције `fallback` у секцију `generate` у датотеци `nuxt.config.js`:
 
-<blog-gist filename="nuxt.config.js"
-:highlighted-line="15"
-:gist="gist"></blog-gist>
+```
+export default {
+   /*
+    ** Rendering mode
+    ** Doc: https://nuxtjs.org/api/configuration-mode
+    */
+   mode: "universal",
+
+   // ...
+   
+   generate: {
+      // ***************************************************
+      // *** Without the next line, F5 on dynamic routes ***
+      // *** will fail                                   ***
+      // ***************************************************
+      fallback: true
+   },
+
+   // ...
+};
+```
 
 Ова опција има три могуће вредности:
 

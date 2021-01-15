@@ -22,11 +22,47 @@ visible: true
 одлучио да тему поставим у два засебна фајла, који се затим учитавају преко
 директиве `import`.
 
-<blog-gist filename="dunedain-dark.js"
-:gist="gist"></blog-gist>
+``` javascript
+export default {
+    primary: {
+        base: '#426344',
+        lighten1: '#6e916f',
+        darken1: '#19391d',
+        darken2: '#003300',
+    },
+    secondary: {
+        base: '#7f9a7f',
+        lighten1: '#afcbae',
+        darken1: '#526c53',
+    },
+    accent: '#d3dc7b',
+    error: '#d45858',
+    info: '#4592cf',
+    success: '#69b069',
+    warning: '#c78634'
+};
 
-<blog-gist filename="nuxt.config.js"
-:gist="gist"></blog-gist>
+```
+
+``` javascript
+import light from './theme/dunedain-light';
+
+import dark from './theme/dunedain-dark';
+
+// ...
+export default {
+// ...
+vuetify: {
+        // ...
+        theme: {
+            // ...
+            themes: {
+                light, dark
+            }
+        }
+    },
+};
+```
 
 [1]: https://material.io/design/color/dark-theme.html
 [2]: https://vuetifyjs.com

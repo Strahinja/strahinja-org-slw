@@ -21,7 +21,7 @@ body
     flex-direction: column;
 }
 
-h1, h2, h3, h4, p, pre
+h1, h2, h3, h4, p
 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -58,14 +58,15 @@ h4
 
 p
 {
-    padding-bottom: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 blockquote
 {
     margin-left: 2em;
     border-left: .5em solid #212121;
-    padding-left: 1em;
+    padding: 1em;
     overflow-x: auto;
     max-width: 100%;
 }
@@ -117,10 +118,41 @@ a
     color: #687668;
 }
 
-pre, code
+pre, code, kbd
 {
     font-family: 'PxPlus IBM VGA8 for Powerline';
-    line-height: 1rem;
+    line-height: 1.1em;
+    background-color: #1d201d;
+    border-radius: .5ex;
+    color: #b3e3b3;
+}
+
+code
+{
+    padding: .2ex .7ex;
+    margin: 0 .5ex;
+}
+
+blockquote>code
+{
+    background-color: transparent;
+}
+
+kbd 
+{
+    font-family: 'Fira Sans Extra Condensed', Arial, sans-serif;
+    font-size: 12pt;
+    padding: .2ex .7ex;
+    border: .3ex solid #637363;
+    border-bottom-width: .5ex;
+    margin: 0 .5ex;
+}
+
+pre
+{
+    padding: 1.5em;
+    margin: .5em 4em;
+    border: .3ex solid #344334;
 }
 
 #made-by
@@ -194,6 +226,24 @@ footer>.content
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+}
+
+.content>a.image,
+details>div>a.image
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-25%);
+    padding-left: 50%;
+}
+
+.content>a.image>img,
+details>div>a.image>img
+{
+    display: block;
+    max-width: 100%;
+    border-radius: 1ex;
 }
 
 header a

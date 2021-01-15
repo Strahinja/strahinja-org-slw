@@ -4,6 +4,7 @@ page-desc: Списак мојих радова
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 stylesheet: ../css/portfolio.css
+add-image-links: 0
 ---
 {include "../header"}
 {.splash}{.content}

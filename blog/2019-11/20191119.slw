@@ -67,8 +67,79 @@ _Nuxt.js_-а. Видећемо које су неке од карактерис�
 Конкретан код сам раздвојио на онај који је оријентисан на податке (_Vuex
 store_) и презентациони (компонента `Gist`). Ево најзанимљивијих делова:
 
-<blog-gist filename="Gist.vue"
-:gist="gist"></blog-gist>
+```
+<template>
+<!-- ... -->
+</template>
+
+<script>
+export default {
+    name: 'Gist',
+    props: {
+        gist: { type: Object, default: () => ({}), required: true },
+        filename: { type: String, default: '', required: true },
+        highlightedLine: { type: Number, default: 0, required: false },
+    },
+    computed: {
+        gistRawUrl()
+        {
+            if (!this || !this.gist || !this.gist.files ||
+this.filename.length==0
+                || !this.gist.files[this.filename])
+            {
+                return null;
+            }
+            return this.gist.files[this.filename].raw_url;
+        },
+        gistLines()
+        {
+            if (!this || !this.gist || !this.gist.files ||
+this.filename.length==0
+                || !this.gist.files[this.filename])
+            {
+                return null;
+            }
+            return this.gist.files[this.filename].content;
+        },
+    },
+    methods: {
+        escapeHtml(html)
+        {
+            return html
+                .replace(/&/g, '&')
+                .replace(/</g, '<')
+                .replace(/>/g, '>')
+                .replace(/"/g, '"')
+                .replace(/'/g, ''');
+        },
+        formatGistLinesAsHtml(lines)
+        {
+            let result = '';
+            if (lines && lines.length>0)
+            {
+                let linesArray = lines.split('\n');
+                for (let line in linesArray)
+                {
+                    result += (this.highlightedLine==parseInt(line)+1 ?
+                        '<tr class="highlighted-line">\n' :
+                        '<tr>\n') +
+                    '<td class="blob-num js-line-number" data-line-number="' +
+                    (parseInt(line)+1).toString() + '"></td>\n' +
+                    '<td class="blob-code blob-code-inner js-file-line">' +
+                    this.escapeHtml(linesArray[line]) +
+                    '</td>\n' +
+                    '</tr>\n';
+                }
+            }
+            return result;
+        }
+    },
+};
+</script>
+<style lang="sass">
+@import '~/assets/sass/gist.sass'
+</style>
+```
 
 `Gist.vue` је компонента за приказивање гиста која је намењена директном
 укључивању у _Markdown_ фајл. Пошто се фајл преко _API_-ја учитава као чист
@@ -76,8 +147,12 @@ store_) и презентациони (компонента `Gist`). Ево на
 означити појединачне линије или истаћи жељени _keyword_. Ова компонента се у
 _Markdown_ фајл укључује на следећи начин:
 
-<blog-gist filename="extra-component.md"
-:gist="gist"></blog-gist>
+```
+<component :is="extraComponentLoader"
+    :filename="'nuxt.config.js'"
+    :highlighted-line="15"
+    :gist="gist"></component>
+```
 
 [1]: https://help.github.com/en/github/writing-on-github/creating-gists
 [2]: https://strahinja.org/blog/20191026
