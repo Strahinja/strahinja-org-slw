@@ -56,10 +56,29 @@ h4
     font-size: 110%;
 }
 
+ul
+{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+li
+{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    list-style-type: disc;
+}
+
 p
 {
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+li>p
+{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 blockquote
@@ -153,6 +172,7 @@ pre
     padding: 1.5em;
     margin: .5em 4em;
     border: .3ex solid #344334;
+    overflow-x: auto;
 }
 
 #made-by
@@ -217,7 +237,7 @@ main .content p
 
 header>.content,
 main>.content,
-footer>.content
+footer>*>.content
 {
     display: block;
     text-align: left;
@@ -226,6 +246,12 @@ footer>.content
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+}
+
+header>.content
+{
+    display: flex;
+    flex-direction: row;
 }
 
 .content>a.image,
@@ -248,11 +274,12 @@ details>div>a.image>img
 
 header a
 {
-    color: #fff;
     display: inline-block;
+    flex-grow: 0;
+    background: transparent;
+    color: #fff;
     font-family: "Fira Sans Extra Condensed", sans-serif;
     font-weight: 700;
-    background: transparent;
     text-decoration: none;
     padding: .5em 2em;
 }
@@ -264,13 +291,15 @@ header a:hover
     /*transition: all .5s ease-in-out;*/
 }
 
-header>.right
+header .right
 {
-    width: 3rem;
+    display: flex;
+    flex-grow: 1;
     align-self: center;
+    justify-content: flex-end;
 }
 
-header>.right>a
+header .right>a
 {
     width: 2rem;
     height: 2rem;
@@ -285,13 +314,49 @@ footer
     display: flex;
     min-height: 2rem;
     flex-shrink: 0;
-    background-color: #233223;
     margin-top: auto;
     flex-direction: column;
     font-size: 80%;
 }
 
-footer>.content
+footer>.links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    background-color: #333733;
+}
+
+footer>.links>a
+{
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin: 0 .5em;
+}
+
+footer>.links>a:hover
+{
+    background: #535553;
+}
+
+footer>.links>a>svg
+{
+    align-self: center;
+}
+
+footer>.bottom-text
+{
+    background-color: #272927;
+}
+
+footer>.bottom-text>.content
 {
     display: flex;
     flex-direction: column;
@@ -425,6 +490,8 @@ ul.incdir
     display: flex;
     flex-direction: column;
     margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 ul.incdir>li
@@ -559,11 +626,6 @@ details[open]>div
 .techlogo>a:hover>img
 {
     opacity: 1.0;
-}
-
-.slweb
-{
-    filter: invert(46%) sepia(12%) saturate(372%) hue-rotate(71deg) brightness(93%) contrast(92%);
 }
 
 .button-accent
