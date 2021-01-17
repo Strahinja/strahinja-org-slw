@@ -1,0 +1,17 @@
+.splash-toolbar>.content>img,
+main>.content>img
+{
+    display: block;
+    border: .7ex solid #c3e3c3;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+main
+{
+    padding-top: 0;
+}
+
