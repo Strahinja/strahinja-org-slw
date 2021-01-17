@@ -302,12 +302,21 @@ header .right
 
 header .right>a
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 2rem;
     height: 2rem;
     padding: 0;
     border-radius: 50%;
     text-align: center;
     line-height: 2rem;
+}
+
+header .right>a>span
+{
+    display: block;
+    margin-top: -.3em;
 }
 
 footer

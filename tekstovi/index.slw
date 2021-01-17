@@ -1,0 +1,29 @@
+---
+site-name: Текстови //strahinja.org
+stylesheet: ../css/index.css
+stylesheet: ../css/fonts.css
+---
+{include "../header"}
+{.splash}{.content}
+# Текстови
+{/.content}{/.splash}
+{main}
+{.content}
+{csv "tekstovi"}
+{.text}
+{.description}
+## $1
+
+{.dates}$3-$4{/.dates}
+
+$7
+
+{.actions}[(Отвори)]($5){/.actions}
+
+{/.description}
+{/.text}
+{/csv}
+{/.content}
+{/main}
+{include "../footer"}
+

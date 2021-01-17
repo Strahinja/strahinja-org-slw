@@ -4,7 +4,11 @@
     RewriteEngine On
     RewriteBase /
 
+    RewriteRule ^/?profil/?$ /profil/index.html [L]
     RewriteRule ^/?portfolio/?$ /portfolio/index.html [L]
+    RewriteRule ^/?tekstovi/?$ /tekstovi/index.html [L]
+    RewriteRule ^/?tekstovi/softver/?$ /tekstovi/softver/index.html [L]
+    RewriteRule ^/?tekstovi/softver/ojl/?$ /tekstovi/softver/ojl.html [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^/?blog/([^/]+)/([^/]+)/?$ /blog/$1/$2.html [L]

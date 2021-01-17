@@ -1,4 +1,4 @@
-echo "index.html $(for d in *-*; do
+echo "index.html $(for d in *; do
     if [ -d $d ]; then
         for f in $d/*.slw; do
             [ -r $f ] && echo $d/$(basename -s.slw $f).slt
@@ -6,3 +6,4 @@ echo "index.html $(for d in *-*; do
         done
     fi
 done)" | xargs redo-ifchange
+

@@ -24,7 +24,7 @@ add-image-links: 0
 
 $6
 
-{.actions}[(Отвори)]($4) {/.actions}
+{.actions}[(Отвори)]($4){/.actions}
 
 {/.description}
 {/.project}
