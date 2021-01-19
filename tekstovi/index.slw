@@ -2,27 +2,38 @@
 site-name: Текстови //strahinja.org
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
+stylesheet: ../css/tekstovi.css
 ---
+{=textfile}
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor"
+    d="M14,17H7V15H14M17,13H7V11H17M17,9H7V7H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2
+    0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+</svg>
+{/=textfile}
 {include "../header"}
 {.splash}{.content}
 # Текстови
 {/.content}{/.splash}
 {main}
 {.content}
+{table.texts}
+{tbody}
 {csv "tekstovi"}
-{.text}
-{.description}
-## $1
+{tr.text}
+{td.icon}{=textfile}{/td}
+{td.description}
+## <a href="$6">$1</a>
 
-{.dates}$3-$4{/.dates}
+$8
 
-$7
-
-{.actions}[(Отвори)]($5){/.actions}
-
-{/.description}
-{/.text}
+{/td}
+{td.date}$4{/td}
+{td.date}$5{/td}
+{/tr}
 {/csv}
+{/tbody}
+{/table}
 {/.content}
 {/main}
 {include "../footer"}

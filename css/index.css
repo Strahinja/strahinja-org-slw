@@ -30,10 +30,18 @@ h1, h2, h3, h4, p
 
 h1, h2, h3, h4
 {
+    position: relative;
     padding-top: .5em;
     padding-bottom: .5em;
     line-height: 1.1em;
     font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+h1>svg, h2>svg, h3>svg, h4>svg
+{
+    position: absolute;
+    margin-left: -1.5em;
+
 }
 
 h1
