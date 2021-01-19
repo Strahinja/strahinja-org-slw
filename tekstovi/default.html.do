@@ -1,3 +1,4 @@
+#!/bin/bash
 redo-ifchange template.slw.in
 if [ "$(dirname $2)" != "." ]; then
     redo-ifchange $2.slt

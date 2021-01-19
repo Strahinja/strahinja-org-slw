@@ -1,1 +1,2 @@
-rm -f *~ index.html */*.html */*.slt
+rm -f *~ index.html */*.html */*.slt tekstovi-*.csv
+

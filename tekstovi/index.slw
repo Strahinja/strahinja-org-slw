@@ -17,9 +17,12 @@ stylesheet: ../css/tekstovi.css
 {/.content}{/.splash}
 {main}
 {.content}
-{table.texts}
+
+## Математика
+
+{table.texts math}
 {tbody}
-{csv "tekstovi"}
+{csv "tekstovi-matematika"}
 {tr.text}
 {td.icon}{=textfile}{/td}
 {td.description}
@@ -34,6 +37,27 @@ $8
 {/csv}
 {/tbody}
 {/table}
+
+## Софтвер
+
+{table.texts software}
+{tbody}
+{csv "tekstovi-softver"}
+{tr.text}
+{td.icon}{=textfile}{/td}
+{td.description}
+## <a href="$6">$1</a>
+
+$8
+
+{/td}
+{td.date}$4{/td}
+{td.date}$5{/td}
+{/tr}
+{/csv}
+{/tbody}
+{/table}
+
 {/.content}
 {/main}
 {include "../footer"}
