@@ -2,9 +2,17 @@
 {
     display: table;
     background-color: #212121;
-    border-radius: 1ex;
     border-spacing: 0;
     margin: 1em 0;
+    box-shadow: .7em .7em #000;
+}
+
+.texts>tbody
+{
+    display: block;
+    padding: .5em;
+    margin: .5em;
+    border: 3px double #a3a383;
 }
 
 .text
@@ -41,6 +49,25 @@
 .description>p
 {
     padding: 0;
+}
+
+
+.description>h1 a,
+.description>h2 a,
+.description>h3 a,
+.description>h4 a
+{
+    color: ##a3a383;
+    text-decoration: none;
+}
+
+.description>h1 a:hover,
+.description>h2 a:hover,
+.description>h3 a:hover,
+.description>h4 a:hover
+{
+    background-color: #fff;
+    color: #121212;
 }
 
 .date

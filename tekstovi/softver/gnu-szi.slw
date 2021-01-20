@@ -1,0 +1,608 @@
+---
+site-name: КАКОДА употребљавам ГНУ-ов систем за изградњу //strahinja.org
+stylesheet: ../../css/index.css
+stylesheet: ../../css/fonts.css
+---
+
+# КАКОДА употребљавам ГНУ-ов систем за изградњу
+
+Страхиња Радић  
+**\[верзија 1.2, 2. април 2006.]**
+
+Copyright © 2006. Страхиња Радић. Сва права задржана.  
+Можете штампати, приказивати и умножавати неизмењени (измене укључују, али се не
+ограничавају на, пресловљавање на неко друго писмо) текст овог упутства на било
+ком медијуму, широм света, без надокнаде, под условом да је сачувано ово
+обавештење.
+
+## Садржај
+
+## 1. Додавање подршке за Аутомејк новим програмима.
+
+Као што вам је вероватно познато, ГНУ-ов Мејк (_GNU Make_) је програм који служи
+за аутоматизовано превођење програма, најчешће оних који су написани на
+програмском језику Це. Он подржава парцијално превођење само оних делова
+програма који су измењени, на тај начин скраћујући сам поступак превођења. Пошто
+је поступак писања мејк-датотека (_makefile_) које су преносиве на разне
+оперативне системе релативно заморан, изграђени су програми који попуњавају оне
+досадне делове, а аутору дозвољавају да се концентрише на основне податке који
+су битни за његов пројекат. Ти програми се називају ГНУ-ов Аутоконф (_GNU
+Autoconf_) и ГНУ-ов Аутомејк (_GNU Automake_). Заједно са још неким програмима
+се они једним именом зову ГНУ-ов систем за изградњу (_GNU build system_).
+
+У овом упутству ћу претпоставити да је на систему инсталирана верзија 2.59
+ГНУ-овог Аутоконфа и 1.9.2 ГНУ-овог Аутомејка.
+
+## 2. Почетна фаза.
+
+Програм који ће нам послужити као пример исписује поруку `Hello, world!` на
+енглеском језику, а уз додатне параметре и још неке податке. Касније ћемо видети
+како се све поруке у нашем програму могу превести на било који језик. Назив
+_пакета,_ што у терминологији Покрета за слободни софтвер означава скуп програма
+који чине једну целину, је у овом примеру истоветан називу јединог програма који
+је његов део, и гласи `hello`. Програмера који додаје подршку за ГНУ-ов систем
+за изградњу свом програму ћу назвати „Пера Перић“ (на енглеском _Pera Perich_),
+његов рачунар `darkstar`, a за адресу епоште ћу писати `pperic@yahoo.com`.
+Претпоставићу да је његово корисничко име на систему `pperic`, као и да постоји
+директоријум `/home/pperic/src`, у коме се све ово дешава.
+
+Пре свега, морамо да направимо посебан директоријум за наш пакет, који ћемо
+називати _основним директоријумом._ Обично се из практичних разлога његов назив
+бира по следећем принципу:
+
+```
+[назив_пакета]-[верзија_пакета]
+```
+
+па ће `назив_пакета` код нас бити `hello`, док ће `верзија_пакета` имати
+вредност `0.1`. И за одређивање верзије пакета постоје правила. Први број
+означава број главне верзије, и за почетне верзије програма се обично користи
+нула. Други број означава подверзију, а може имати и посебна значења. На пример,
+стабилне верзије се могу означавати парним, а нестабилне и пробне верзије
+непарним бројевима.
+
+Према томе, прве наредбе које ћемо унети гласе:
+
+```
+$ cd /home/pperic/src
+$ mkdir hello-0.1
+$ cd hello-0.1
+```
+
+Даље, потребно је направити директоријум `src`, у коме ће бити смештен изворни
+код програма. Обратите пажњу на то да је његова пуна путања:
+
+```
+/home/pperic/src/hello-0.1/src
+```
+
+Тај директоријум ће за сада садржати само датотекe `hello.c` и `hello.h`. Њихов
+садржај се може видети на крају овог упутства.
+
+```
+$ mkdir src
+```
+
+После тога, потребно је покренути програм Аутоскен, који анализира постојеће
+датотеке и саставља извештај о томе које наредбе би требало додати у датотеку
+`configure.ac`. Такође, Аутоскен ствара датотеку `configure.scan`, која садржи
+основу за будућу датотеку `configure.ac`.
+
+```
+$ autoscan
+autom4te: configure.ac: no such file or directory
+autoscan: /usr/bin/autom4te failed with exit status: 1
+```
+
+Добићемо датотеку `configure.scan`, коју је потребно прилагодити потребама нашег
+пакета и преименовати у `configure.ac`.
+
+```makefile
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT(hello, 0.1, pperic@yahoo.com)
+AC_CONFIG_SRCDIR([src/hello.c])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([string.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_CHECK_FUNCS([strchr strerror])
+AC_OUTPUT
+```
+
+```
+$ mv configure.scan configure.ac
+$ aclocal
+/usr/share/aclocal/gob2.m4:7: warning: underquoted definition of GOB2_HOOK
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+```
+
+Даље, направићемо датотеке `Makefile.am`:
+
+```makefile
+SUBDIRS = src
+
+EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL NEWS README
+```
+
+и `src/Makefile.am`:
+
+```makefile
+bin_PROGRAMS = hello
+hello_SOURCES = hello.c hello.h gettext.h
+
+EXTRA_DIST = hello.c hello.h gettext.h
+
+localedir=$(datadir)/locale
+
+INCLUDES= $(all_includes) -DLOCALEDIR=\"$(localedir)\"
+```
+
+такође, потребно је направити следеће датотеке, од којих неке за сада могу да
+буду празне:
+
+
+```
+$ echo "Pera Perich <pperic@yahoo.com>" > AUTHORS
+$ touch ChangeLog NEWS README
+```
+
+## Геттекст
+
+ГНУ-ов Геттекст (_GNU Gettext_) представља систем за подршку неенглеским
+језицима: превод порука у програму, исписивање датума, валута, и сл. Једним
+именом се то зове _интернационализација програма._ Подршку за ГНУ-ов Геттекст
+додајемо на следећи начин:
+
+```
+$ gettextize --intl
+Creating intl/ subdirectory
+Creating po/ subdirectory
+(...)
+(...)
+Press Return to acknowledge the previous 6 paragraphs.
+[[ENTER]]
+```
+
+Наша датотека `configure.ac` ће сада добити други облик:
+
+```makefile
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT(aclocal.m4)
+AM_INIT_AUTOMAKE(hello, 0.1)
+AC_CONFIG_SRCDIR([src/hello.c])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([string.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_CHECK_FUNCS([strchr strerror])
+AC_OUTPUT([Makefile po/Makefile.in m4/Makefile])
+```
+
+Сада задајемо следеће наредбе:
+
+```
+$ echo src/hello.c > po/POTFILES.in
+$ cp /usr/share/gettext/gettext.h src
+$ cp /usr/share/automake-1.9/config.guess .
+$ cp /usr/share/automake-1.9/config.sub .
+$ aclocal -I m4
+/usr/share/aclocal/gob2.m4:7: warning: underquoted definition of GOB2_HOOK
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+$ autoconf
+$ automake --gnu --add-missing m4/Makefile
+configure.ac: installing `./install-sh'
+configure.ac: installing `./missing'
+$ autoheader
+```
+
+После извршења ових наредби би требало поново уредити датотеку `Makefile.am`:
+
+```makefile
+SUBDIRS = m4 intl po src
+
+EXTRA_DIST = config.rpath configure mkinstalldirs  AUTHORS \
+ COPYING ChangeLog INSTALL NEWS README
+
+ACLOCAL_AMFLAGS = -I m4
+```
+
+Такође би требало изменити датотеку `configure.ac`:
+
+```makefile
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT(aclocal.m4)
+AC_CANONICAL_SYSTEM
+AM_INIT_AUTOMAKE(hello, 0.1)
+AC_CONFIG_SRCDIR([src/hello.c])
+AC_CONFIG_HEADER([config.h])
+
+# internationalization macros
+AM_GNU_GETTEXT
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_CHECK_HEADERS([errno.h getopt.h locale.h stdio.h \
+  string.h time.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+# Checks for library functions.
+AC_CHECK_FUNCS([bindtextdomain ctime exit fprintf \
+  getopt_long printf setlocale strchr strcpy strerror \
+  textdomain])
+
+AC_OUTPUT([intl/Makefile Makefile m4/Makefile \
+  po/Makefile.in src/Makefile])
+```
+
+Битан корак је постављање подешавања у датотеци `Makevars`. Подешавања која нас
+тренутно интересују су назив носиоца ауторских права и адреса епоште на коју се
+шаљу примедбе о грешкама. Ти делови су посебно истакнути у одговарајућем
+листингу:
+
+```
+$ cd po
+$ cp Makevars.template Makevars
+```
+
+```makefile
+# Makefile variables for PO directory in any package using GNU gettext.
+
+# Usually the message domain is the same as the package name.
+DOMAIN = $(PACKAGE)
+
+# These two variables depend on the location of this directory.
+subdir = po
+top_builddir = ..
+
+# These options get passed to xgettext.
+XGETTEXT_OPTIONS = --keyword=_ --keyword=N_
+
+# This is the copyright holder that gets inserted into the header of the
+# $(DOMAIN).pot file.  Set this to the copyright holder of the surrounding
+# package.  (Note that the msgstr strings, extracted from the package's
+# sources, belong to the copyright holder of the package.)  Translators are
+# expected to transfer the copyright for their translations to this person
+# or entity, or to disclaim their copyright.  The empty string stands for
+# the public domain; in this case the translators are expected to disclaim
+# their copyright.
+COPYRIGHT_HOLDER = Pera Perich
+
+# This is the email address or URL to which the translators shall report
+# bugs in the untranslated strings:
+# - Strings which are not entire sentences, see the maintainer guidelines
+#   in the GNU gettext documentation, section 'Preparing Strings'.
+# - Strings which use unclear terms or require additional context to be
+#   understood.
+# - Strings which make invalid assumptions about notation of date, time or
+#   money.
+# - Pluralisation problems.
+# - Incorrect English spelling.
+# - Incorrect formatting.
+# It can be your email address, or a mailing list address where translators
+# can write to without being subscribed, or the URL of a web page through
+# which the translators can contact you.
+MSGID_BUGS_ADDRESS = pperic@yahoo.com
+
+# This is the list of locale categories, beyond LC_MESSAGES, for which the
+# message catalogs shall be used.  It is usually empty.
+EXTRA_LOCALE_CATEGORIES =
+```
+
+## Завршница
+
+Коначно, долазимо до тренутка када први пут можемо да позовемо спис
+`./configure`. Узгред ћемо створити основне датотеке са порукама, `hello.pot` и
+`en.po`:
+
+```
+$ ./configure
+checking build system type... i686-redhat-linux-gnu
+(...)
+checking for strerror... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating m4/Makefile
+config.status: creating intl/Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+$ make
+cd . && /bin/sh /home/pperic/src/hello-0.1/missing --run aclocal-1.9 -I m4
+(...)
+make[2]: Entering directory `/home/pperic/src/hello-0.1/src'
+if gcc -DHAVE_CONFIG_H -I. -I. -I..  -DLOCALEDIR=\"/usr/local/share/locale\"\
+-g -O2 -MT hello.o -MD -MP -MF ".deps/hello.Tpo" -c -o hello.o hello.c; \
+then mv -f ".deps/hello.Tpo" ".deps/hello.Po"; else rm -f ".deps/hello.Tpo";\
+exit 1; fi
+gcc  -g -O2   -o hello  hello.o
+make[2]: Leaving directory `/home/pperic/src/hello-0.1/src'
+make[2]: Entering directory `/home/pperic/src/hello-0.1'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/home/pperic/src/hello-0.1'
+make[1]: Leaving directory `/home/pperic/src/hello-0.1'
+$ cd po
+$ msginit -l en
+The new message catalog should contain your email address, so that users can
+give you feedback about the translations, and so that maintainers can contact
+you in case of unexpected technical problems.
+
+Is the following your email address?
+  pperic@deathstar
+Please confirm by pressing Return, or enter your email address.
+pperic@yahoo.com <kbd class="taster">ENTER
+Retrieving http://www2.iro.umontreal.ca/~pinard/po/registry.cgi?t\
+eam=index... failed.
+Please visit your translation team's homepage at
+  http://www2.iro.umontreal.ca/~pinard/po/registry.cgi?team=en
+  http://www.iro.umontreal.ca/contrib/po/HTML/teams.html
+  http://www.iro.umontreal.ca/contrib/po/HTML/translators.html
+  http://www.iro.umontreal.ca/contrib/po/HTML/index.html
+and consider joining your translation team's mailing list
+  <en@translate.freefriends.org>
+
+Created en.po.
+$ cd ..
+$ automake
+$ autoconf
+$ ./configure
+$ make
+```
+
+Ево садржаја датотеке `hello.c`:
+
+```c
+/*
+ *   hello - A simple program that demonstrates autotools
+ *   Copyright (C) 2005 Pera Perich <pperic@yahoo.com>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program; if not, write to the Free Software
+ *   Foundation, Inc., 51 Franklin St - Fifth Floor, Boston, MA
+ *   02110-1301 USA
+ */
+
+#include "hello.h"
+
+void version()
+{
+  printf(_("%s %s\n"
+	   "Written by Pera Perich.\n\n"
+	   "Copyright (C) 2005 Pera Perich.\n"
+	   "%s comes with ABSOLUTELY NO WARRANTY.\n"
+	   "This is free software, and you are welcome to redistribute it\n"
+	   "under certain conditions; for details, see the source "
+	   "code.\n"), PACKAGE, VERSION, PACKAGE);
+}
+
+void usage()
+{
+  fprintf(stderr, _("Usage: %s [OPTION]\n\n"
+		    "Shows a familiar message.\n\n"
+		    "\t-h,\t--help\t\tdisplay this help and exit\n"
+		    "\t-v,\t--verbose\tprint additional information\n"
+		    "\t\t--version\tdisplay version information and exit\n\n"
+		    "Report bugs to: <pperic@yahoo.com>\n"), PACKAGE);
+}
+
+void my_error(char* prog, char* msg)
+{
+  fprintf(stderr, "%s: %s\n", prog, msg);
+  fprintf(stderr, _("Try `%s --help' for more information.\n"), prog);
+}
+
+int main(int argc, char** argv)
+{
+  int c;
+  int digit_optind = 0;
+  int verbose_flag = 0;
+  char msg[255];
+
+  setlocale(LC_ALL,"");
+  bindtextdomain(PACKAGE,LOCALEDIR);
+  textdomain(PACKAGE);
+  
+  while (1) {
+    int this_option_optind = optind ? optind : 1;
+    int option_index = 0;
+    static struct option long_options[] = {
+      {"help", 0, 0, 'h'},
+      {"verbose", 0, 0, 'v'},
+      {"version", 0, 0, 0},
+      {0, 0, 0, 0}
+    };
+    
+    c = getopt_long (argc, argv, "hv",
+		     long_options, &option_index);
+    if (c == -1)
+      break;
+    
+    switch (c) {
+      case 0:
+	if (option_index == 0) {
+	  usage();
+	  return 0;
+	} else if (option_index == 1) {
+	  verbose_flag = 1;
+	} else if (option_index == 2) {
+	  version();
+	  return 0;
+	}
+	break;
+	
+      case 'h':
+	usage();
+	return 0;
+	
+      case 'v':
+	verbose_flag = 1;
+	break;
+
+      default:
+	sprintf(msg, _("getopt returned character code 0%d"), c);
+	my_error(argv[0], msg);
+	return 1;
+    }
+  }
+  
+  if (optind < argc) {
+    my_error(argv[0], strerror(E2BIG));
+    return E2BIG;
+  }
+
+  printf(_("Hello, brave GNU world!\n"));
+  if (verbose_flag == 1) {
+    time_t t = time(NULL);
+    char buf[255];
+    char* p = NULL;
+
+    strcpy(buf, ctime(&t));
+    p = strchr(buf, '\n');
+    if (p) *p = 0;
+    
+    printf(_("This program demonstrates a typical GNU program.\n"
+	     "The name of the current executable is: `%s',\n"
+	     "and the current time is: `%s'.\n"), argv[0], buf);
+  }
+  return 0;
+}
+```
+
+и датотеке `hello.h`:
+
+```c
+#ifndef __hello_h
+#define __hello_h
+/*
+ *   hello - A simple program that demonstrates autotools
+ *   Copyright (C) 2005 Pera Perich <pperic@yahoo.com>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program; if not, write to the Free Software
+ *   Foundation, Inc., 51 Franklin St - Fifth Floor, Boston, MA
+ *   02110-1301 USA
+ */
+
+#ifdef HAVE_CONFIG_H
+#include "../config.h"
+#else
+#error Must have config.h! Run ./configure
+#endif
+
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
+#else
+#error Must have errno.h in order to compile hello!
+#endif
+
+#ifdef HAVE_GETOPT_H
+#include <getopt.h>
+#else
+#error Must have getopt.h in order to compile hello!
+#endif
+
+#include "gettext.h"
+
+#ifdef ENABLE_NLS
+
+#ifndef _
+#define _(str) gettext(str)
+#endif
+
+#ifndef N_
+#define N_(str) gettext_noop(str)
+#endif
+
+#endif /* ENABLE_NLS */
+
+#ifdef HAVE_STDIO_H
+#include <stdio.h>
+#else
+#error Must have stdio.h in order to compile hello!
+#endif
+
+#ifdef HAVE_STRING_H
+#include <string.h>
+#else
+#error Must have string.h in order to compile hello!
+#endif
+
+#ifdef HAVE_TIME_H
+#include <time.h>
+#else
+#error Must have time.h in order to compile hello!
+#endif
+
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#else
+#error Must have unistd.h in order to compile hello!
+#endif
+
+#endif /* __hello_h */
+```
+
+Овим је програм спреман за основни рад са ГНУ-овим Мејком, а даље хакерисање
+препуштам читаоцима.
+
+_Страхиња Радић_  
+У Београду,  
+26. марта 2006.
+

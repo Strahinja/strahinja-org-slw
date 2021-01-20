@@ -1,0 +1,137 @@
+---
+site-name: Матрице преласка и хомогене координате //strahinja.org
+stylesheet: ../../css/index.css
+stylesheet: ../../css/fonts.css
+---
+
+# Матрице преласка и хомогене координате
+
+Страхиња Радић  
+**\[верзија 0.1, 23. септембар 2009.]**
+
+Нека су $e=(e_1, e_2, \ldots, e_n)$ и $e'=(e'_1, e'_2, \ldots, e'_n)$ _базе_
+$n$-димензионалног векторског простора $V^n$. Даље, нека су _координате_ вектора
+$v$, где је $A=O+v$, у бази $e$ једнаке $x_1$, $x_2$, $\ldots$, $x_n$, а у бази
+$e'$ једнаке $x'_1$, $x'_2$, $\ldots$, $x'_n$.
+
+Осим тога, нека је матрица $C$ таква да су јој _колоне **координате** вектора
+старе базе у новој._ Ове координате су бројеви којима се множе вектори нове базе
+да би се добили вектори старе:
+
+$$\tag{1}
+\begin{aligned}
+e_1&={c_{11}}\cdot e'_1+{c_{21}}\cdot e'_2+\ldots+{c_{n1}}
+\cdot e'_n\text{,}\\
+&\ \,\vdots\\
+e_n&=c_{1n}\cdot e'_1+c_{2n}\cdot e'_2+\ldots+c_{nn}\cdot e'_n\text{,}
+\end{aligned}$$
+
+тј.
+
+$e=e'C\text{,}\qquad C=\begin{bmatrix}
+{c_{11}}&c_{12}&\cdots&c_{1n}\\
+{c_{21}}&c_{22}&\cdots&c_{2n}\\
+\vdots&\vdots&&\vdots\\
+{c_{n1}}&c_{n2}&\cdots&c_{nn}
+\end{bmatrix}\text{.}$
+
+Ова матрица, $C$, се назива _матрицом преласка са нове **базе** на стару._
+Дакле, формулама (1) исказујемо векторе старе базе, $e_1$, $e_2$, $\ldots$,
+$e_n$ преко вектора нове, $e'_1$, $e'_2$, $\ldots$, $e'_n$, ефективно
+_**изражавајући векторе старе базе у новој бази.**_
+
+Ако се ради о афином простору, за репер је, поред базе придруженог векторског
+простора, битна и тачка коју смо изабрали за координатни почетак, тачка $O$. Ако
+су њене координате у новој бази (бројеви којима се множе вектори нове базе)
+једнаке $c_{1(n+1)}$, $c_{2(n+1)}$, $\ldots$, $c_{n(n+1)}$, онда тачку $O$
+представљамо у бази $e'$ на следећи начин:
+
+$$O=c_{1(n+1)}\cdot e'_1+c_{2(n+1)}\cdot e'_2+\cdots
++c_{n(n+1)}\cdot e'_n\text{.}$$
+
+Напишимо сада израз за тачку $A$ у старој бази и сведимо га на израз за исту
+тачку у новој бази:
+
+$$\begin{aligned}A&=v+O=x_1\cdot e_1+x_2\cdot e_2+\cdots+x_n\cdot e_n+O=\\
+&=x_1\cdot(c_{11}\cdot e'_1+\cdots+c_{n1}\cdot e'_n)+\\
+&\phantom{\=}+x_2\cdot(c_{12}\cdot e'_1+\cdots+c_{n2}\cdot e'_n)+\\
+&\phantom{\=}+\cdots+\\
+&\phantom{\=}+x_n\cdot(c_{1n}\cdot e'_1+\cdots+c_{nn}\cdot e'_n)+\\
+&\phantom{\=}+c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n\end{aligned}$$
+
+Сада групишимо чланове уз векторе нове базе:
+
+$$\begin{aligned}A&=e'_1\cdot
+(x_1\cdot c_{11}+x_2\cdot c_{12}+\cdots+x_n\cdot c_{1n}+c_{1(n+1)})+\\
+&\phantom{\=}+e'_2\cdot(x_1\cdot c_{21}+x_2\cdot c_{22}+\cdots+x_n\cdot
+c_{2n}+c_{2(n+1)})+\\
+&\phantom{\=}+\cdots+\\
+&\phantom{\=}+e'_n\cdot(x_1\cdot c_{n1}+x_2\cdot c_{n2}+\cdots+x_n\cdot
+c_{nn}+c_{n(n+1)})\text{,}\end{aligned}$$
+
+тј.:
+
+$$A=e'\cdot(Cx^{\text T}+O_{e'})\text{,}\qquad x=(x_1, x_2, \ldots,
+x_n)=v_{e'}\text{.}$$
+
+Одавде су координате вектора $v$ у новој бази ${x'}^{\text T}=Cx^{\text T}$, односно
+_**матрица преласка са нове базе на стару**_ је уједно матрица која _**преводи
+координате вектора тачке у старој бази на координате у новој бази.**_
+
+Увођењем _**хомогених координата**_ имамо
+$x_i=\frac{\xi_i}{\xi_{n+1}}$, па је:
+
+$$A=\frac{\xi_1}{\xi_{n+1}}\cdot e_1
++\frac{\xi_2}{\xi_{n+1}}\cdot e_2
++\cdots
++\frac{\xi_n}{\xi_{n+1}}\cdot e_n+O\text{.}$$
+
+Множењем претходне једнакости са $\xi_{n+1}$ добијамо:
+
+$$\xi_{n+1}A=\xi_1\cdot e_1+\xi_2\cdot e_2
++\cdots
++\xi_n\cdot e_n+\xi_{n+1}O\text{.}$$
+
+Превођењем у нову базу добијамо:
+
+$$\begin{aligned}\xi_{n+1}A&=\xi_1\cdot(c_{11}\cdot e'_1+\cdots c_{n1}\cdot e'_n)+\\
+&\phantom{\=}\xi_2\cdot(c_{12}\cdot e'_1+\cdots c_{n2}\cdot e'_n)+\\
+&\phantom{\=}+\cdots+\\
+&\phantom{\=}\xi_n\cdot(c_{1n}\cdot e'_1+\cdots c_{nn}\cdot e'_n)+\\
+&\phantom{\=}\xi_{n+1}\cdot(c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n)\end{aligned}$$
+
+Груписањем следи:
+
+$$\begin{aligned}\xi_{n+1}A
+&=e'_1\cdot(\xi_1\cdot c_{11}+\xi_2\cdot c_{12}+\cdots+\xi_n\cdot c_{1n}
++\xi_{n+1}c_{1(n+1)})+\\
+&\phantom{\=}+e'_2\cdot(\xi_1\cdot c_{21}+\xi_2\cdot c_{22}+\cdots+\xi_n\cdot c_{2n}
++\xi_{n+1}c_{2(n+1)})+\\
+&\phantom{\=}+\cdots+\\
+&\phantom{\=}+e'_n\cdot(\xi_1\cdot c_{n1}+\xi_2\cdot c_{n2}+\cdots+\xi_n\cdot c_{nn}
++\xi_{n+1}c_{n(n+1)})\text{,}\end{aligned}$$
+
+Можемо проширити матрицу $C$ на следећи начин:
+
+$$\overline{C}=\begin{bmatrix}
+C&O_{e'}^{\text T}\\
+\vec 0&1
+\end{bmatrix}\text{,}\qquad O_{e'}=(c_{1(n+1)}, c_{2(n+1)}, \ldots,
+c_{n(n+1)})\text{,}\qquad\vec0=(0, 0, \ldots, 0)\text{.}$$
+
+Сада је за $\lambda\xi'_{n+1}=\xi_{n+1}$:
+
+$$\begin{aligned}\lambda\cdot\xi'\cdot
+\begin{bmatrix}
+e'&0\\\vec0&1
+\end{bmatrix}^{\text T}=\lambda\xi'_{n+1}\cdot\begin{bmatrix}
+A\\1
+\end{bmatrix}^{\text T}=(\overline{C}\xi^{\text T})^{\text T}\cdot\begin{bmatrix}
+e'&0\\\vec0&1
+\end{bmatrix}^{\text T}\text{,}\qquad
+\xi=(\xi_1, \xi_2, \ldots, \xi_{n+1})\text{,}\end{aligned}$$
+
+па је $\lambda{\xi'}^{\text T}=\overline{C}\xi^{\text T}$ за $\xi'=(\xi'_1,
+\xi'_2, \ldots, \xi'_{n+1})$. ($\overline{C}$ је _матрица центроафине
+трансформације.)_
+
