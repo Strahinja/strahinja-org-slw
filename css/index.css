@@ -391,6 +391,14 @@ footer>.bottom-text>.content
     padding: 0;
 }
 
+.footnotes
+{
+    width: 80%;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 10pt;
+}
+
 .splash
 {
     background-color: #1d201d;
