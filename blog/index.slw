@@ -3,6 +3,7 @@ site-name: Блог //strahinja.org
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 ext-in-permalink: 0
+add-footnote-div: 1
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

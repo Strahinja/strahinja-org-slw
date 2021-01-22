@@ -393,9 +393,8 @@ footer>.bottom-text>.content
 
 .footnotes
 {
-    width: 80%;
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 10pt;
 }
 

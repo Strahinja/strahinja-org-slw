@@ -3,6 +3,7 @@ stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 title-heading-level: 1
 permalink-url: /tekstovi/softver/ojl
+add-footnote-div: 1
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
