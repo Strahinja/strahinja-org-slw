@@ -85,3 +85,55 @@
     padding-right: 1.5em;
 }
 
+@media (max-width: 600px)
+{
+
+.texts
+{
+    display: block;
+}
+
+.texts>tbody
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.text
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+.texts td.icon
+{
+    display: none;
+}
+
+.description
+{
+    display: block;
+    padding-bottom: .5em;
+}
+
+.texts td
+{
+    display: block;
+}
+
+.date
+{
+    display: block;
+    padding-left: 1em;
+    padding-right: 0;
+}
+
+.date:last-child
+{
+    padding-right: 1em;
+}
+
+}
+

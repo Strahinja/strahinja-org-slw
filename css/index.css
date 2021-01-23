@@ -740,6 +740,19 @@ details[open]>div
 
 @media (max-width: 600px)
 {
+
+h1, h2, h3, h4, p
+{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+pre
+{
+    padding: 1.5em;
+    margin: .5em 2em;
+}
+
 .splash-toolbar a>svg
 {
     margin: 0;

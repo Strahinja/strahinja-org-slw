@@ -9,7 +9,9 @@ This is a much simpler version of my homepage, statically built from
 
 ## Prerequisites
 
-[Slweb][slweb] and its prerequisites.
+- [Slweb][slweb] and its prerequisites.
+
+- **awk**(1)
 
 ## Clone & build
 

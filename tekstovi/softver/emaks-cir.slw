@@ -2,6 +2,7 @@
 site-name: КАКОДА подесим и користим ГНУ-ов Емакс за унос текста на српском //strahinja.org
 stylesheet: ../../css/index.css
 stylesheet: ../../css/fonts.css
+add-footnote-div: 1
 ---
 
 # КАКОДА подесим и користим ГНУ-ов Емакс за унос текста на српском
@@ -375,7 +376,7 @@ _А у т о р_
   грчку реч ισος, са значењем „исто“, „једнако“, па је зато у српском ја
   представљам као „изо“.
 
-[^(1)]: http://www.jezik.org/srpski2004/uputstva/nase_pismo/emacs.html —
+[^(1)]: https://www.jezik.org/srpski2004/uputstva/nase\_pismo/emacs.html —
   Упутство „Нашег писма“ за подешавање ГНУ-овог Емакса за рад са српском
   ћирилицом.
 
@@ -384,11 +385,11 @@ _А у т о р_
 *[ГНУ]: ГНУ није Уникс!
 *[ОЈЛ]: Општа јавна лиценца
 
-[1]: http://www.gnu.org/gnu/manifesto.sr.html
-[2]: http://www.gnu.org/gnu/gnu.sr.html
-[3]: http://www.gnu.org/philosophy/free-sw.sr.html
-[4]: http://www.gnu.org/home.sr.html
-[5]: http://www.xfree.org/
-[6]: http://czyborra.com/unifont/HEADER.html
-[7]: http://strahinja.org/fontovi/obilic-u-1.2.3.tar.bz2
+[1]: https://www.gnu.org/gnu/manifesto.sr.html
+[2]: https://www.gnu.org/gnu/gnu.sr.html
+[3]: https://www.gnu.org/philosophy/free-sw.sr.html
+[4]: https://www.gnu.org/home.sr.html
+[5]: https://xfree86.org/
+[6]: https://czyborra.com/unifont/HEADER.html
+[7]: https://strahinja.org/fontovi/obilic-u-1.2.3.tar.bz2
 
