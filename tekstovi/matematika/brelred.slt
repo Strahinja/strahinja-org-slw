@@ -3,7 +3,7 @@ stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
 title-heading-level: 1
-permalink-url: /tekstovi/matematika/koord
+permalink-url: /tekstovi/matematika/brelred
 add-footnote-div: 1
 ---
 {=permalink}
@@ -15,7 +15,7 @@ add-footnote-div: 1
 {include "../../header"}
 {main}{.content}
 {.heading-link back-arrow}[Назад на листу текстова](/tekstovi){/.heading-link}
-{include "koord"}
+{include "brelred"}
 {/.content}{/main}
 {include "../../footer"}
 

@@ -263,7 +263,7 @@ header>.content
     flex-direction: row;
 }
 
-.content>a.image,
+.content a.image,
 details>div>a.image
 {
     display: inline-block;
@@ -273,10 +273,11 @@ details>div>a.image
     padding-left: 50%;
 }
 
-.content>a.image>img,
+.content a.image>img,
 details>div>a.image>img
 {
     display: block;
+    background-color: #fff;
     max-width: 100%;
     border-radius: 1ex;
 }
