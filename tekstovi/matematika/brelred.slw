@@ -61,7 +61,7 @@ $$\begin{aligned}
 третирати као $H=(\Z_{p^s})^{n_q+n_{q+1}+\dotsb+n_r}$.
 Размотримо ово у посебној леми.
 
-<blockquote>
+{blockquote}
 
 **Лема 1.**
 Број елемената максималног реда у групи:
@@ -85,7 +85,7 @@ $$|K|-\bigl(p^s-\varphi(p^s)\bigr)^k=p^{sk}-p^{(s-1)k}=p^{(s-1)k}\cdot(p^k-1)$$
 да бисмо добили само број оних елемената који јесу максималног реда.
 $\Box$
 
-</blockquote>
+{/blockquote}
 
 Према леми 1, број елемената реда $p^s$ у групи
 $H$ једнак је $p^{(s-1)k}\cdot(p^k-1)$, где је
@@ -94,9 +94,9 @@ $p^s$ у групи $G$ једнак:
 
 $$\boxed{\begin{aligned}
 p^{\ell}\cdot
-  p^{(s-1)k}\cdot\bigl(p^k-1\bigr),
+  p^{(s-1)k}\cdot\bigl(p^k-1\bigr),\ 
 &\text{за }q>1\text{,}\\
-p^{(s-1)k}\cdot\bigl(p^k-1\bigr),
+p^{(s-1)k}\cdot\bigl(p^k-1\bigr),\ 
 &\text{за }q=1\text{,}
 \end{aligned}\qquad\Bigl[\text{уз }\ell=\sum\limits_{t=1}^{q-1}i_tn_t
 \text{ и }k=\sum\limits_{j=q}^rn_j\Bigr]\text{.}\ \Box}$$
@@ -107,7 +107,7 @@ p^{(s-1)k}\cdot\bigl(p^k-1\bigr),
 
 $$G=\Z_{2^2}\times\Z_{2^3}\times\Z_3\times\Z_5\times\Z_5$$
 
-ћемо имати: $H=\Z_{2^2}\times\Z_{2^3}$, $K=\Z_3$, $L=\Z_5\times\Z_5$, $G\cong
+ћемо имати: $H=\Z_{2^2}\times\Z_{2^3}$, $K=\Z_3$, $L=\Z_5\times\Z_5$, $G\cong 
 H\times K\times L$.
 
 Подгрупе чији је ред узајамно прост са редом тражених елемената се

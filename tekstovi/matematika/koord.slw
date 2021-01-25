@@ -54,19 +54,19 @@ $$O=c_{1(n+1)}\cdot e'_1+c_{2(n+1)}\cdot e'_2+\cdots
 
 $$\begin{aligned}A&=v+O=x_1\cdot e_1+x_2\cdot e_2+\cdots+x_n\cdot e_n+O=\\
 &=x_1\cdot(c_{11}\cdot e'_1+\cdots+c_{n1}\cdot e'_n)+\\
-&\phantom{\=}+x_2\cdot(c_{12}\cdot e'_1+\cdots+c_{n2}\cdot e'_n)+\\
-&\phantom{\=}+\cdots+\\
-&\phantom{\=}+x_n\cdot(c_{1n}\cdot e'_1+\cdots+c_{nn}\cdot e'_n)+\\
-&\phantom{\=}+c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n\end{aligned}$$
+&\phantom{=}+x_2\cdot(c_{12}\cdot e'_1+\cdots+c_{n2}\cdot e'_n)+\\
+&\phantom{=}+\cdots+\\
+&\phantom{=}+x_n\cdot(c_{1n}\cdot e'_1+\cdots+c_{nn}\cdot e'_n)+\\
+&\phantom{=}+c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n\end{aligned}$$
 
 Сада групишимо чланове уз векторе нове базе:
 
 $$\begin{aligned}A&=e'_1\cdot
 (x_1\cdot c_{11}+x_2\cdot c_{12}+\cdots+x_n\cdot c_{1n}+c_{1(n+1)})+\\
-&\phantom{\=}+e'_2\cdot(x_1\cdot c_{21}+x_2\cdot c_{22}+\cdots+x_n\cdot
+&\phantom{=}+e'_2\cdot(x_1\cdot c_{21}+x_2\cdot c_{22}+\cdots+x_n\cdot
 c_{2n}+c_{2(n+1)})+\\
-&\phantom{\=}+\cdots+\\
-&\phantom{\=}+e'_n\cdot(x_1\cdot c_{n1}+x_2\cdot c_{n2}+\cdots+x_n\cdot
+&\phantom{=}+\cdots+\\
+&\phantom{=}+e'_n\cdot(x_1\cdot c_{n1}+x_2\cdot c_{n2}+\cdots+x_n\cdot
 c_{nn}+c_{n(n+1)})\text{,}\end{aligned}$$
 
 тј.:
@@ -95,20 +95,20 @@ $$\xi_{n+1}A=\xi_1\cdot e_1+\xi_2\cdot e_2
 Превођењем у нову базу добијамо:
 
 $$\begin{aligned}\xi_{n+1}A&=\xi_1\cdot(c_{11}\cdot e'_1+\cdots c_{n1}\cdot e'_n)+\\
-&\phantom{\=}\xi_2\cdot(c_{12}\cdot e'_1+\cdots c_{n2}\cdot e'_n)+\\
-&\phantom{\=}+\cdots+\\
-&\phantom{\=}\xi_n\cdot(c_{1n}\cdot e'_1+\cdots c_{nn}\cdot e'_n)+\\
-&\phantom{\=}\xi_{n+1}\cdot(c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n)\end{aligned}$$
+&\phantom{=}\xi_2\cdot(c_{12}\cdot e'_1+\cdots c_{n2}\cdot e'_n)+\\
+&\phantom{=}+\cdots+\\
+&\phantom{=}\xi_n\cdot(c_{1n}\cdot e'_1+\cdots c_{nn}\cdot e'_n)+\\
+&\phantom{=}\xi_{n+1}\cdot(c_{1(n+1)}\cdot e'_1+\cdots+c_{n(n+1)}\cdot e'_n)\end{aligned}$$
 
 Груписањем следи:
 
 $$\begin{aligned}\xi_{n+1}A
 &=e'_1\cdot(\xi_1\cdot c_{11}+\xi_2\cdot c_{12}+\cdots+\xi_n\cdot c_{1n}
 +\xi_{n+1}c_{1(n+1)})+\\
-&\phantom{\=}+e'_2\cdot(\xi_1\cdot c_{21}+\xi_2\cdot c_{22}+\cdots+\xi_n\cdot c_{2n}
+&\phantom{=}+e'_2\cdot(\xi_1\cdot c_{21}+\xi_2\cdot c_{22}+\cdots+\xi_n\cdot c_{2n}
 +\xi_{n+1}c_{2(n+1)})+\\
-&\phantom{\=}+\cdots+\\
-&\phantom{\=}+e'_n\cdot(\xi_1\cdot c_{n1}+\xi_2\cdot c_{n2}+\cdots+\xi_n\cdot c_{nn}
+&\phantom{=}+\cdots+\\
+&\phantom{=}+e'_n\cdot(\xi_1\cdot c_{n1}+\xi_2\cdot c_{n2}+\cdots+\xi_n\cdot c_{nn}
 +\xi_{n+1}c_{n(n+1)})\text{,}\end{aligned}$$
 
 Можемо проширити матрицу $C$ на следећи начин:

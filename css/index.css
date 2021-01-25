@@ -263,7 +263,7 @@ header>.content
     flex-direction: row;
 }
 
-.content a.image,
+.content>a.image,
 details>div>a.image
 {
     display: inline-block;
@@ -273,7 +273,7 @@ details>div>a.image
     padding-left: 50%;
 }
 
-.content a.image>img,
+.content>a.image>img,
 details>div>a.image>img
 {
     display: block;
@@ -397,6 +397,7 @@ footer>.bottom-text>.content
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 10pt;
+    word-break: break-all;
 }
 
 .splash
@@ -737,6 +738,12 @@ details[open]>div
 {
     vertical-align: middle;
     margin-right: 1ex;
+}
+
+.katex-display
+{
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 @media (max-width: 600px)
