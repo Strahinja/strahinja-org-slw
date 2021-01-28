@@ -4,7 +4,7 @@ stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
 title-heading-level: 1
-permalink-url: /tekstovi/softver/ojl
+permalink-url: /tekstovi/matematika/dzn
 add-footnote-div: 1
 ---
 {=permalink}
@@ -16,7 +16,7 @@ add-footnote-div: 1
 {include "../../header"}
 {main}{.content}
 {.heading-link back-arrow}[Назад на листу текстова](/tekstovi){/.heading-link}
-{include "ojl"}
+{include "dzn"}
 {/.content}{/main}
 {include "../../footer"}
 
