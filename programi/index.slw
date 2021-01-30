@@ -4,6 +4,7 @@ stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 stylesheet: ../css/programi.css
 add-image-links: 0
+add-figcaption: 0
 ---
 {include "../header"}
 {.splash}{.content}

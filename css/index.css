@@ -11,7 +11,7 @@ html,
 body
 {
     background-color: #121212;
-    color: #fff;
+    color: #c0c0c0;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14pt;
     line-height: 2em;
@@ -30,6 +30,7 @@ h1, h2, h3, h4, p
 
 h1, h2, h3, h4
 {
+    color: #fff;
     position: relative;
     padding-top: .5em;
     padding-bottom: .5em;
@@ -145,6 +146,13 @@ a
     color: #687668;
 }
 
+a:hover
+{
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
 pre, code, kbd
 {
     font-family: 'PxPlus IBM VGA8 for Powerline';
@@ -249,6 +257,7 @@ footer>*>.content
 {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     text-align: left;
     background-color: transparent;
     padding: 0;
@@ -273,13 +282,35 @@ details>div>a.image
     padding-left: 50%;
 }
 
-.content>a.image>img,
-details>div>a.image>img
+figure
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+figure>figcaption
+{
+    display: block;
+    font-size: 10pt;
+    line-height: 1.2em;
+    text-align: center;
+    padding-top: .5em;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure>a.image>img
 {
     display: block;
     background-color: #fff;
     max-width: 100%;
     border-radius: 1ex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header a
@@ -626,10 +657,17 @@ a.timestamp
     font-size: 100%;
 }
 
+.heading-link>a:hover
+{
+    color: #000;
+}
+
 a.timestamp
 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    display: inline-block;
+    padding: .2em;
+    margin: .1rem 2rem;
+    line-height: 1rem;
 }
 
 .heading-link.back-arrow

@@ -182,7 +182,8 @@ $\Delta x$ ће ${\rm d}f(x_0)$, погађате, бити константан
 диференцијал „парче“ праве $x=x_0+\Delta x$ између $y_0$ и пресека са тангентом.
 Прираштај функције је „парче“ исте праве до пресека са графиком функције. Оба
 „парчета“ зависе од тога колико се одмичемо од $x_0$ $\bigl($тј. зависе од
-$\Delta x\bigr)$.][fig1]
+$\Delta x\bigr)$.][fig1] 
+
 
 Сада се можемо запитати: чему је једнак диференцијал од променљиве?  Проверимо
 ово уз помоћ формуле којом се задаје диференцијал: нека је нова „функција“
@@ -190,7 +191,7 @@ $\Delta x\bigr)$.][fig1]
 једнака променљивој $x$. Даље је: $\Delta z=g(x_0+\Delta x)-g(x_0)=x_0+\Delta
 x-x_0=\Delta x$, па је $z'=g'(x_0)=\lim\limits_{\Delta
 x\rightarrow0}\frac{\Delta x}{\Delta x}\equiv 1$, и диференцијал је једнак ${\rm
-d}z\overset\Delta={\rm d}\bigl[g(x)=x\bigr]% =g'(x_0)\cdot\Delta x=1\cdot\Delta
+d}z\overset\Delta={\rm d}\bigl[g(x)=x\bigr]=g'(x_0)\cdot\Delta x=1\cdot\Delta
 x=\Delta x$. По дефиницији диференцијал ${\rm d}z$ у овом случају означавамо са
 ${\rm d}x$. Дакле, у случају реалне променљиве имамо да је њен диференцијал
 ефективно једнак њеном прираштају, ${\rm d}x=\Delta x$. Ако сада $\Delta x={\rm
@@ -291,10 +292,10 @@ $$\star\star\star$$
 _функцији_ $x=x(t)$, онда извод $y'_t$ налазимо преко извода $y'_x$ и $x'_t$.
 Саставимо, најпре, израз за $\Delta y$:
 
-$$\Delta y=y'_x\cdot\Delta x+\alpha(\Delta x)\cdot\Delta x
+$$\begin{gathered}\Delta y=y'_x\cdot\Delta x+\alpha(\Delta x)\cdot\Delta x
 \qquad\big/:\Delta t\\
 \frac{\Delta y}{\Delta t}=y'_x\cdot\frac{\Delta x}{\Delta
-  t}+\frac{\alpha(\Delta x)\cdot\Delta x}{\Delta t}$$
+  t}+\frac{\alpha(\Delta x)\cdot\Delta x}{\Delta t}\end{gathered}$$
 
 Ако сада „пустимо лимес“ кад $\Delta t\rightarrow0$, имаћемо:
 
@@ -499,8 +500,8 @@ $$w'_v=w'_x\cdot y'_v+w'_y\cdot y'_v+w'_z\cdot z'_v.$$
 $\displaystyle\Bigl(\frac{\partial{f_m}}{\partial{x_n}}\Bigr)^{2/3}$ наспрам
 $\displaystyle\bigl((f_m)'_{x_n}\bigr)^{2/3}\Bigr]$:
 
-$$\frac{\partial{w}}{\partial{u}}=\frac{\partial{w}}{\partial{x}}\frac{\partial{x}}{\partial{u}}+\frac{\partial{w}}{\partial{y}}\frac{\partial{y}}{\partial{u}}+\frac{\partial{w}}{\partial{z}}\frac{\partial{z}}{\partial{u}},\\
-\frac{\partial{w}}{\partial{v}}=\frac{\partial{w}}{\partial{x}}\frac{\partial{x}}{\partial{v}}+\frac{\partial{w}}{\partial{y}}\frac{\partial{y}}{\partial{v}}+\frac{\partial{w}}{\partial{z}}\frac{\partial{z}}{\partial{v}}.$$
+$$\begin{gathered}\frac{\partial{w}}{\partial{u}}=\frac{\partial{w}}{\partial{x}}\frac{\partial{x}}{\partial{u}}+\frac{\partial{w}}{\partial{y}}\frac{\partial{y}}{\partial{u}}+\frac{\partial{w}}{\partial{z}}\frac{\partial{z}}{\partial{u}},\\
+\frac{\partial{w}}{\partial{v}}=\frac{\partial{w}}{\partial{x}}\frac{\partial{x}}{\partial{v}}+\frac{\partial{w}}{\partial{y}}\frac{\partial{y}}{\partial{v}}+\frac{\partial{w}}{\partial{z}}\frac{\partial{z}}{\partial{v}}.\end{gathered}$$
 
 Сада можемо да видимо да у овом случају „скраћивање разломака“ _не важи;_ у
 супротном бисмо имали:
@@ -747,8 +748,7 @@ $$\star\star\star$$
 Погледајмо један „конкретан“ пример $\bigl[$у случају са сл.&nbsp;2 је
 $f(x,y)=\sqrt{1-(x^2+y^2)}$, уз незнатни помак због прегледности$\bigr]$.
 
-![Слика 2. Вектор нормале $\vec N$ и тангентна раван
-$T$ на површ $\pi$.][fig2]
+![Слика 2. Вектор нормале $\vec N$ и тангентна раван $T$ на површ $\pi$.][fig2]
 
 Замислимо неку површ $\pi$, која се може представити било експлицитном реалном
 функцијом облика $z=f(x,y)$ $\bigl[$што је случај који је представљен на
@@ -837,7 +837,7 @@ $$\mathbf{n}:\quad\frac{x-x_0}{F'_x}=\frac{y-y_0}{F'_y}=\frac{z-z_0}{F'_z},$$
 Површ изражена _експлицитном функцијом_ $z=f(x,y)$ је само посебан случај
 претходног разматрања. За њу је $F(x,y,z)=z-f(x,y)$, па је:
 
-$$F'_x=-f'_x,\quad F'_y=-f'_y,\quad F'_z=1,
+$$\begin{gathered}F'_x=-f'_x,\quad F'_y=-f'_y,\quad F'_z=1,
 \left.\begin{aligned}
 \vec\tau_x&=(1,0,f'_x),\\
 \vec\tau_y&=(0,1,f'_y).
@@ -845,7 +845,7 @@ $$F'_x=-f'_x,\quad F'_y=-f'_y,\quad F'_z=1,
 \vec N=(-f'_x, -f'_y, 1),\quad\vec n=\Biggl(%
 -\frac{f'_x}{\sqrt{1+{f'_x}^2+{f'_y}^2}},\;
 -\frac{f'_y}{\sqrt{1+{f'_x}^2+{f'_y}^2}},\;
-\frac{1}{\sqrt{1+{f'_x}^2+{f'_y}^2}}\Biggr).$$
+\frac{1}{\sqrt{1+{f'_x}^2+{f'_y}^2}}\Biggr).\end{gathered}$$
 
 а једначине тангентне равни и нормале су:
 
@@ -885,41 +885,40 @@ $$\begin{gathered}T:\quad\frac{{\rm D}(Y,Z)}{{\rm D}(u,v)}\cdot(x-x_0)
 +\frac{{\rm D}(X,Z)}{{\rm D}(v,u)}\cdot(y-y_0)
 +\frac{{\rm D}(X,Y)}{{\rm D}(u,v)}\cdot(z-z_0)=0,\\[2ex]
 \mathbf{n}:\quad\frac{x-x_0}{\frac{{\rm D}(Y,Z)}{{\rm D}(u,v)}}=\frac{y-y_0}
-{\frac{{\rm D}(X,Z)}{{\rm D}(v,u)}}=\frac{z-z_0}{\frac{{\rm D}(X,Y)}{{\rm D}(u,v)}}.
-\end{gathered}$$
+{\frac{{\rm D}(X,Z)}{{\rm D}(v,u)}}=\frac{z-z_0}{\frac{{\rm D}(X,Y)}{{\rm
+D}(u,v)}}.\end{gathered}$$
 
 ---
 
 ## Литература
 
 1. Григорий Михайлович Фихтенгольц: _Курс дифференциального и
-   интегрального исчисления,_ том I, II и III, издание четвертое,
-   исправленное, Москва, Ленинград, Государственное издательство
-   физико-математической литературы, 1958.  
-   $\bigl[$Одлична књига! Ако не знате руски, требало би да га научите макар због ове
-   књиге.$\bigr]$
+   интегрального исчисления,_ том I, II и III, издание четвертое, исправленное,
+   Москва, Ленинград, Государственное издательство физико-математической
+   литературы, 1958.  $\bigl[$Одлична књига! Ако не знате руски, требало би да
+   га научите макар због ове књиге.$\bigr]$
 
 2. Григорий Михайлович Фихтенгольц: _Основы математического
-   анализа,_ том I и II, издание седьмое, Москва, Физматлит,
-   2002.  
-   $\bigl[$Нешто краћа верзија [1].$\bigr]$
+   анализа,_ том I и II, издание седьмое, Москва, Физматлит, 2002.
+   $\bigl[$Нешто краћа верзија \[1].$\bigr]$
 
 3. Dušan Adnađević, Zoran Kadelburg: _Matematička analiza&nbsp;I,_
-   šesto izdanje, Matematički fakultet, Beograd, 2003.  
-   $\bigl[$Вероватно већ знате за ову и следећу књигу [4], које по мом мишљењу нису
-   довољно прилагођене почетницима. Ипак, вреди их погледати када
-   савладате основе.$\bigr]$
+   šesto izdanje, Matematički fakultet, Beograd, 2003.  $\bigl[$Вероватно већ
+   знате за ову и следећу књигу \[4], које по мом мишљењу нису довољно
+   прилагођене почетницима. Ипак, вреди их погледати када савладате
+   основе.$\bigr]$
 
 4. Dušan Adnađević, Zoran Kadelburg: _Matematička analiza&nbsp;II,_
    treće izdanje, Nauka, Beograd, 1999.
 
 ## Фусноте
 
-[^fus1]: Ознака $\overset\Delta=$ је еквивалентна ознаци $\overset{\mathrm{def}}{=}$.
+[^fus1]: Ознака $\overset\Delta=$ је еквивалентна ознаци
+$\overset{\mathrm{def}}{=}$.
 [^fus2]: Још једна ознака за извод је $y'_x=f'_x(x_0)$.
 [^fus3]: У овом и у сличним случајевима се подразумева да се вектор прираштаја,
 $\Delta M$, _транспонује_ пре множења.
 
-[fig1]: /img/tekstovi/dzn-001.png
-[fig2]: /img/tekstovi/dzn-002.png
+[fig1]: /img/tekstovi/dzn-001.webp
+[fig2]: /img/tekstovi/dzn-002.webp
 
