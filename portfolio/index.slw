@@ -17,7 +17,8 @@ add-figcaption: 0
 {.projects}
 {csv "portfolio"}
 {.project}
-<a href="$5" target="_blank" class="image" title="$#5: $1">![$1]($5)</a>
+<a href="$5" target="_blank" class="image" title="$#5: $1"
+    style="background-image: url('$5'); background-size: cover;">![$1]($5)</a>
 {.description}
 ## $1
 

@@ -24,6 +24,7 @@
 
 .image
 {
+    background-color: #c0c0c0;
     width: 20em;
     min-width: 20em;
     height: 20em;
@@ -31,6 +32,7 @@
     overflow: hidden;
     margin-left: 1.5em;
     border-radius: 1ex;
+    flex: 0 1;
 }
 
 .image>img
@@ -38,6 +40,11 @@
     height: 20em;
     min-height: 20em;
     min-width: 20em;
+}
+
+.description
+{
+    flex: 1 1 auto;
 }
 
 .actions
@@ -77,5 +84,79 @@
 {
     opacity: 0.8;
     will-change: opacity;
+}
+
+@media (max-width: 900px)
+{
+
+.image
+{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    min-width: 10rem;
+    max-width: 10rem;
+    height: 10rem;
+    min-height: 10rem;
+    max-height: 10rem;
+}
+
+.image>img
+{
+    flex: 1 0;
+    visibility: hidden;
+    width: initial;
+    min-width: 0;
+    max-width: 100%;
+    height: initial;
+    min-height: 0;
+    max-height: 100%;
+}
+
+}
+
+@media (max-width: 600px)
+{
+
+.project
+{
+    flex-direction: column;
+}
+
+
+.image
+{
+    width: initial;
+    min-width: initial;
+    max-width: 100%;
+    height: initial;
+    min-height: initial;
+    max-height: 10rem;
+    margin: 0 1em;
+}
+
+.description
+{
+    margin-top: 1em;
+}
+
+.dates
+{
+    padding: 0 1rem;
+}
+
+.actions
+{
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    justify-content: flex-end;
+}
+
+.actions>a
+{
+margin: 0;
+    padding: 0 1em;
+}
 }
 
