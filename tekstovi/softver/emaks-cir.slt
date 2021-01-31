@@ -6,6 +6,7 @@ stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
 title-heading-level: 1
 permalink-url: /tekstovi/softver/emaks-cir
 add-footnote-div: 1
+add-article-header: 1
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

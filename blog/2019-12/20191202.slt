@@ -4,6 +4,7 @@ stylesheet: /css/fonts.css
 title-heading-level: 1
 permalink-url: /blog/2019-12/20191202
 add-footnote-div: 1
+add-article-header: 1
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

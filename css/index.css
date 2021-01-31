@@ -251,13 +251,23 @@ main .content p
     line-height: 2em;
 }
 
+details>div>header,
+main>.content>header
+{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    position: static;
+    align-items: flex-start;
+}
+
 header>.content,
 main>.content,
 footer>*>.content
 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     text-align: left;
     background-color: transparent;
     padding: 0;
@@ -270,6 +280,14 @@ header>.content
 {
     display: flex;
     flex-direction: row;
+}
+
+header>address
+{
+    color: #c0c0c0;
+    font-style: normal;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .content>a.image,
@@ -620,6 +638,9 @@ details>summary>svg
 
 details>div
 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     opacity: 0.0;
     will-change: opacity;
 }
