@@ -45,6 +45,22 @@
     padding: 0 2rem;
 }
 
+.actions>.inactive-link 
+{
+    display: inline;
+    background-color: #404040;
+    color: #c0c0c0;
+    position: relative;
+    cursor: not-allowed;
+    padding: .6em 1em;
+    margin: 0 .5em 0 0;
+    border-radius: 1ex;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2ex;
+    font-size: 12pt;
+}
+
 .actions>a
 {
     background-color: #374537;
@@ -146,9 +162,10 @@
     justify-content: flex-end;
 }
 
-.actions>a
+.actions>a,
+.actions>.inactive-link
 {
-margin: 0;
+    margin: 0;
     padding: 0 1em;
 }
 }

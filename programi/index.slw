@@ -23,7 +23,11 @@ add-figcaption: 0
 
 $6
 
+$?4
 {.actions}[(Преузми)]($4){/.actions}
+$?!
+{.actions}{.inactive-link}Преузми{/.inactive-link}{/.actions}
+$?/
 
 {/.description}
 {/.program}

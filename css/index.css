@@ -457,7 +457,9 @@ footer>.bottom-text>.content
 
 .footnotes p
 {
-    text-indent: -1em;
+    text-indent: 2em;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .splash
