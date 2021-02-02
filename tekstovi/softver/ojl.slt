@@ -1,5 +1,5 @@
 ---
-site-name: Текстови //strahinja.org
+site-name: ГНУ-ова ОЈЛ //strahinja.org
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css

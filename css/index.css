@@ -65,7 +65,8 @@ h4
     font-size: 110%;
 }
 
-ul
+ul, 
+ol
 {
     padding-left: 3em;
     padding-right: 3em;
@@ -75,6 +76,15 @@ li
 {
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+ol>li
+{
+    list-style-type: decimal;
+}
+
+ul>li
+{
     list-style-type: disc;
 }
 
@@ -92,6 +102,7 @@ li>p
 
 blockquote
 {
+    color: #606060;
     margin-left: 2em;
     border-left: .5em solid #212121;
     padding: 1em;
@@ -290,7 +301,6 @@ header p, header address
 
 header>address
 {
-    color: #c0c0c0;
     font-style: normal;
     padding-left: 2em;
     padding-right: 2em;
@@ -452,7 +462,13 @@ footer>.bottom-text>.content
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 10pt;
-    word-break: break-all;
+    word-break: normal;
+}
+
+.footnotes>hr
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .footnotes p
@@ -880,6 +896,11 @@ a.timestamp
 {
     text-align: center;
     align-items: center;
+}
+
+.footnotes
+{
+    word-break: break-all;
 }
 
 }

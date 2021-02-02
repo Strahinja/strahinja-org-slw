@@ -2,8 +2,6 @@
 title: Матрице преласка и хомогене координате
 header-text: \[верзија 0.1, 23. септембар 2009.]
 author: Страхиња Радић
-stylesheet: ../../css/index.css
-stylesheet: ../../css/fonts.css
 ---
 
 Нека су $e=(e_1, e_2, \ldots, e_n)$ и $e'=(e'_1, e'_2, \ldots, e'_n)$ _базе_
