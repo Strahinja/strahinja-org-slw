@@ -1,4 +1,5 @@
 ---
+lang: sr
 site-name: Локални PHP API и JWT, први део //strahinja.org
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css

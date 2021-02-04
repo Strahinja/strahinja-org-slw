@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     background-color: #212121;
-    border-radius: 1ex;
+    /*border-radius: 1ex;*/
     margin-bottom: 1em;
     padding: 1.5em 0;
 }
@@ -31,7 +31,7 @@
     min-height: 20em;
     overflow: hidden;
     margin-left: 1.5em;
-    border-radius: 1ex;
+    /*border-radius: 1ex;*/
     flex: 0 1;
 }
 
@@ -61,7 +61,7 @@
     cursor: not-allowed;
     padding: .6em 1em;
     margin: 0 .5em 0 0;
-    border-radius: 1ex;
+    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2ex;
@@ -70,16 +70,26 @@
 
 .actions>a
 {
+    display: inline-flex;
     background-color: #374537;
     color: #fff;
     position: relative;
-    padding: .6em 1em;
+    /*padding: .6em 1em;*/
+    padding: 0 1em;
     margin: 0 .5em 0 0;
-    border-radius: 1ex;
+    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2ex;
     font-size: 12pt;
+    box-shadow: .5em .5em #000;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.actions>a:active
+{
+    transform: translate(.5em, .5em);
+    box-shadow: none;
 }
 
 .actions>a::before
@@ -173,7 +183,6 @@
 .actions>.inactive-link
 {
     margin: 0;
-    padding: 0 1em;
 }
 }
 
