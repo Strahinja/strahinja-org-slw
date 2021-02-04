@@ -4,8 +4,8 @@
 
 Лична страница Страхиње Радића
 
-This is a much simpler version of my homepage, statically built from
-[slweb][slweb] source. It is JavaScript-free.
+This is a much simpler version of my homepage, intended to be statically built
+from [slweb][slweb] source. It is JavaScript-free.
 
 ## Prerequisites
 

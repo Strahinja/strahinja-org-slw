@@ -110,6 +110,72 @@ blockquote
     max-width: 100%;
 }
 
+table
+{
+    align-self: flex-start;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /*border: 1px solid #606060;*/
+    margin: 1rem 4rem;
+    box-shadow: .5em .5em #000;
+}
+
+thead,
+tbody
+{
+    /*display: block;*/
+    background-color: #0d100d;
+    border: 3px double #606060;
+    padding: .5em;
+    margin: .5em;
+}
+
+thead
+{
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+tbody
+{
+    margin-top: 0;
+}
+
+td, 
+th
+{
+    /*
+     *border: 1px solid #606060;
+     */
+    padding: .2em .5em;
+}
+
+th
+{
+    background-color: #0d100d;
+}
+
+tr
+{
+    position: relative;
+    background-color: #121612;
+}
+
+tr:nth-child(odd)
+{
+    background-color: #232623;
+}
+
+tr:hover
+{
+    background-color: #151915;
+}
+
+tr:nth-child(odd):hover
+{
+    background-color: #262926;
+}
+
 ::-webkit-scrollbar
 {
     background: #121212;
@@ -171,6 +237,12 @@ pre, code, kbd
     background-color: #1d201d;
     border-radius: .5ex;
     color: #b3e3b3;
+}
+
+table code,
+table pre
+{
+    background-color: transparent;
 }
 
 code
