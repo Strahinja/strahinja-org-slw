@@ -224,7 +224,7 @@ $ autoheader
 ```makefile
 SUBDIRS = m4 intl po src
 
-EXTRA_DIST = config.rpath configure mkinstalldirs  AUTHORS \
+EXTRA_DIST = config.rpath configure mkinstalldirs  AUTHORS \\
  COPYING ChangeLog INSTALL NEWS README
 
 ACLOCAL_AMFLAGS = -I m4
@@ -252,18 +252,18 @@ AC_PROG_CC
 # Checks for libraries.
 
 # Checks for header files.
-AC_CHECK_HEADERS([errno.h getopt.h locale.h stdio.h \
+AC_CHECK_HEADERS([errno.h getopt.h locale.h stdio.h \\
   string.h time.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 
 # Checks for library functions.
-AC_CHECK_FUNCS([bindtextdomain ctime exit fprintf \
-  getopt_long printf setlocale strchr strcpy strerror \
+AC_CHECK_FUNCS([bindtextdomain ctime exit fprintf \\
+  getopt_long printf setlocale strchr strcpy strerror \\
   textdomain])
 
-AC_OUTPUT([intl/Makefile Makefile m4/Makefile \
+AC_OUTPUT([intl/Makefile Makefile m4/Makefile \\
   po/Makefile.in src/Makefile])
 ```
 
@@ -344,9 +344,9 @@ $ make
 cd . && /bin/sh /home/pperic/src/hello-0.1/missing --run aclocal-1.9 -I m4
 (...)
 make[2]: Entering directory `/home/pperic/src/hello-0.1/src'
-if gcc -DHAVE_CONFIG_H -I. -I. -I..  -DLOCALEDIR=\"/usr/local/share/locale\"\
--g -O2 -MT hello.o -MD -MP -MF ".deps/hello.Tpo" -c -o hello.o hello.c; \
-then mv -f ".deps/hello.Tpo" ".deps/hello.Po"; else rm -f ".deps/hello.Tpo";\
+if gcc -DHAVE_CONFIG_H -I. -I. -I..  -DLOCALEDIR=\"/usr/local/share/locale\"\\
+-g -O2 -MT hello.o -MD -MP -MF ".deps/hello.Tpo" -c -o hello.o hello.c; \\
+then mv -f ".deps/hello.Tpo" ".deps/hello.Po"; else rm -f ".deps/hello.Tpo";\\
 exit 1; fi
 gcc  -g -O2   -o hello  hello.o
 make[2]: Leaving directory `/home/pperic/src/hello-0.1/src'
@@ -364,7 +364,7 @@ Is the following your email address?
   pperic@deathstar
 Please confirm by pressing Return, or enter your email address.
 pperic@yahoo.com <kbd class="taster">ENTER
-Retrieving http://www2.iro.umontreal.ca/~pinard/po/registry.cgi?t\
+Retrieving http://www2.iro.umontreal.ca/~pinard/po/registry.cgi?t
 eam=index... failed.
 Please visit your translation team's homepage at
   http://www2.iro.umontreal.ca/~pinard/po/registry.cgi?team=en
@@ -409,29 +409,29 @@ $ make
 
 void version()
 {
-  printf(_("%s %s\n"
-	   "Written by Pera Perich.\n\n"
-	   "Copyright (C) 2005 Pera Perich.\n"
-	   "%s comes with ABSOLUTELY NO WARRANTY.\n"
-	   "This is free software, and you are welcome to redistribute it\n"
+  printf(_("%s %s\\n"
+	   "Written by Pera Perich.\\n\\n"
+	   "Copyright (C) 2005 Pera Perich.\\n"
+	   "%s comes with ABSOLUTELY NO WARRANTY.\\n"
+	   "This is free software, and you are welcome to redistribute it\\n"
 	   "under certain conditions; for details, see the source "
-	   "code.\n"), PACKAGE, VERSION, PACKAGE);
+	   "code.\\n"), PACKAGE, VERSION, PACKAGE);
 }
 
 void usage()
 {
-  fprintf(stderr, _("Usage: %s [OPTION]\n\n"
-		    "Shows a familiar message.\n\n"
-		    "\t-h,\t--help\t\tdisplay this help and exit\n"
-		    "\t-v,\t--verbose\tprint additional information\n"
-		    "\t\t--version\tdisplay version information and exit\n\n"
-		    "Report bugs to: <pperic@yahoo.com>\n"), PACKAGE);
+  fprintf(stderr, _("Usage: %s [OPTION]\\n\\n"
+		    "Shows a familiar message.\\n\\n"
+		    "\\t-h,\\t--help\\t\\tdisplay this help and exit\\n"
+		    "\\t-v,\\t--verbose\\tprint additional information\\n"
+		    "\\t\\t--version\\tdisplay version information and exit\\n\\n"
+		    "Report bugs to: <pperic@yahoo.com>\\n"), PACKAGE);
 }
 
 void my_error(char* prog, char* msg)
 {
-  fprintf(stderr, "%s: %s\n", prog, msg);
-  fprintf(stderr, _("Try `%s --help' for more information.\n"), prog);
+  fprintf(stderr, "%s: %s\\n", prog, msg);
+  fprintf(stderr, _("Try `%s --help' for more information.\\n"), prog);
 }
 
 int main(int argc, char** argv)
@@ -493,19 +493,19 @@ int main(int argc, char** argv)
     return E2BIG;
   }
 
-  printf(_("Hello, brave GNU world!\n"));
+  printf(_("Hello, brave GNU world!\\n"));
   if (verbose_flag == 1) {
     time_t t = time(NULL);
     char buf[255];
     char* p = NULL;
 
     strcpy(buf, ctime(&t));
-    p = strchr(buf, '\n');
+    p = strchr(buf, '\\n');
     if (p) *p = 0;
     
-    printf(_("This program demonstrates a typical GNU program.\n"
-	     "The name of the current executable is: `%s',\n"
-	     "and the current time is: `%s'.\n"), argv[0], buf);
+    printf(_("This program demonstrates a typical GNU program.\\n"
+	     "The name of the current executable is: `%s',\\n"
+	     "and the current time is: `%s'.\\n"), argv[0], buf);
   }
   return 0;
 }

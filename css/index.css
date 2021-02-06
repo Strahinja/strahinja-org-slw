@@ -125,9 +125,7 @@ tbody
 {
     /*display: block;*/
     background-color: #0d100d;
-    border: 3px double #606060;
-    padding: .5em;
-    margin: .5em;
+    /*border: 3px double #606060;*/
 }
 
 thead
@@ -144,10 +142,7 @@ tbody
 td, 
 th
 {
-    /*
-     *border: 1px solid #606060;
-     */
-    padding: .2em .5em;
+    padding: .5em 1em;
 }
 
 th
@@ -619,21 +614,23 @@ footer>.bottom-text>.content
     height: 2em;
     line-height: 2em;
     /*padding: .6em 1em;*/
-    padding: .25em .5em;
+    /*padding: .25em .5em;*/
+    padding: .5em 1em;
     margin: .5em;
     /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .3ex;
     /*box-shadow: 0 5px 5px rgba(0,0,0,.1);*/
-    box-shadow: .5em .5em #000;
-    transition: box-shadow .25s ease, transform .25s ease;
+    box-shadow: .25em .25em #000;
+    transition: box-shadow .1s ease, transform .1s ease;
+    will-change: box-shadow, transform;
 }
 
 .splash-toolbar a:active,
 .toolbar a:active
 {
-    transform: translate(.5em, .5em);
+    transform: translate(.25em, .25em);
     box-shadow: none;
 }
 
@@ -898,15 +895,17 @@ details[open]>div
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .3ex;
-    padding: .25em .5em;
+    /*padding: .25em .5em;*/
+    padding: .5em 1em;
     border-radius: 0;
-    box-shadow: .5em .5em #000;
-    transition: box-shadow .25s ease, translate .25s ease;
+    box-shadow: .25em .25em #000;
+    transition: box-shadow .1s ease, transform .1s ease;
+    will-change: box-shadow, transform;
 }
 
 .button-accent>a:active
 {
-    transform: translate(.5em, .5em);
+    transform: translate(.25em, .25em);
     box-shadow: none;
 }
 

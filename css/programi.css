@@ -82,13 +82,14 @@
     text-transform: uppercase;
     letter-spacing: .2ex;
     font-size: 12pt;
-    box-shadow: .5em .5em #000;
-    transition: box-shadow .25s ease, transform .25s ease;
+    box-shadow: .25em .25em #000;
+    transition: box-shadow .1s ease, transform .1s ease;
+    will-change: box-shadow, transform;
 }
 
 .actions>a:active
 {
-    transform: translate(.5em, .5em);
+    transform: translate(.25em, .25em);
     box-shadow: none;
 }
 
