@@ -112,20 +112,23 @@ blockquote
 
 table
 {
-    align-self: flex-start;
+    align-self: center;
     border-collapse: collapse;
     border-spacing: 0;
-    /*border: 1px solid #606060;*/
     margin: 1rem 4rem;
     box-shadow: .5em .5em #000;
+}
+
+.left>table
+{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 thead,
 tbody
 {
-    /*display: block;*/
     background-color: #0d100d;
-    /*border: 3px double #606060;*/
 }
 
 thead
@@ -148,13 +151,14 @@ th
 th
 {
     background-color: #0d100d;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-weight: 400;
 }
 
 tr
 {
     position: relative;
     background-color: #121612;
-    /*transition: background-color .5s ease;*/
 }
 
 tr:nth-child(odd)
@@ -300,14 +304,7 @@ header
 
 main
 {
-    /*
-     *display: flex;
-     *flex-grow: 1;
-     */
     padding: 2rem 0;
-    /*
-     *flex-direction: column;
-     */
 }
 
 #top + main
@@ -426,14 +423,12 @@ header a
     font-weight: 700;
     text-decoration: none;
     padding: .5em 2em;
-    /*transition: background-color .5s ease, color .5s ease;*/
 }
 
 header a:hover
 {
     background: #fff;
     color: #121212;
-    /*transition: all .5s ease-in-out;*/
 }
 
 header .right
@@ -452,7 +447,6 @@ header .right>a
     width: 3rem;
     height: 3rem;
     padding: 0;
-    /*border-radius: 50%;*/
     text-align: center;
     line-height: 3rem;
 }
@@ -489,11 +483,9 @@ footer>.links>a
     justify-content: center;
     color: #fff;
     text-decoration: none;
-    /*border-radius: 50%;*/
     width: 4em;
     height: 4em;
     margin: 0 .5em;
-    /*transition: color, background-color .5s ease;*/
 }
 
 footer>.links>a:hover
@@ -613,15 +605,11 @@ footer>.bottom-text>.content
     min-height: 2em;
     height: 2em;
     line-height: 2em;
-    /*padding: .6em 1em;*/
-    /*padding: .25em .5em;*/
     padding: .5em 1em;
     margin: .5em;
-    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .3ex;
-    /*box-shadow: 0 5px 5px rgba(0,0,0,.1);*/
     box-shadow: .25em .25em #000;
     transition: box-shadow .1s ease, transform .1s ease;
     will-change: box-shadow, transform;
@@ -890,12 +878,9 @@ details[open]>div
     align-items: center;
     min-height: 2em;
     line-height: 2em;
-    /*padding: .6em 1em;*/
-    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .3ex;
-    /*padding: .25em .5em;*/
     padding: .5em 1em;
     border-radius: 0;
     box-shadow: .25em .25em #000;

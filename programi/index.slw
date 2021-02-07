@@ -6,6 +6,9 @@ stylesheet: ../css/fonts.css
 stylesheet: ../css/programi.css
 add-image-links: 0
 add-figcaption: 0
+image: /img/preview-home-strahinja-org.webp
+canonical: https://strahinja.org/programi/
+meta: index-meta.csv
 ---
 {include "../header"}
 {.splash}{.content}
@@ -21,9 +24,7 @@ add-figcaption: 0
     style="background-image: url('$5'); background-size: cover;">![$1]($5)</a>
 {.description}
 ## $1
-
-$6
-
+{p}$6{/p}
 $?4
 {.actions}[(Преузми)]($4){/.actions}
 $?!

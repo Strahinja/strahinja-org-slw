@@ -1,6 +1,6 @@
 ---
 lang: sr
-site-name: Рачунање броја елемената одређеног реда у коначној Абеловој групи //strahinja.org
+site-name: Рачунање броја елемената одређеног реда //strahinja.org
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css

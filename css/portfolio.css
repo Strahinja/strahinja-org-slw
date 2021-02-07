@@ -10,15 +10,15 @@
     display: flex;
     flex-direction: row;
     background-color: #212121;
-    /*border-radius: 1ex;*/
     margin-bottom: 1em;
     padding: 1.5em 0;
 }
 
 .dates
 {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
     font-size: 12pt;
-    font-weight: bold;
+    /*font-weight: bold;*/
     padding: 0 2rem;
 }
 
@@ -31,7 +31,6 @@
     min-height: 20em;
     overflow: hidden;
     margin-left: 1.5em;
-    /*border-radius: 1ex;*/
     flex: 0 1;
 }
 
@@ -49,7 +48,7 @@
 
 .actions
 {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 }
 
 .actions>.inactive-link 
@@ -61,7 +60,6 @@
     cursor: not-allowed;
     padding: .6em 1em;
     margin: 0 .5em 0 0;
-    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2ex;
@@ -74,10 +72,8 @@
     background-color: #374537;
     color: #fff;
     position: relative;
-    /*padding: .6em 1em;*/
     padding: 0 1em;
     margin: 0 .5em 0 0;
-    /*border-radius: 1ex;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2ex;

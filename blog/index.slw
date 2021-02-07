@@ -5,6 +5,9 @@ stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 ext-in-permalink: 0
 add-footnote-div: 1
+image: /img/preview-blog-strahinja-org.webp
+canonical: https://strahinja.org/blog/
+meta: index-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

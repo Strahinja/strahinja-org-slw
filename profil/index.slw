@@ -1,12 +1,15 @@
 ---
 lang: sr
 site-name: Профил //strahinja.org
-page-desc: Сажетак онога чим сам се до сада бавио
+site-desc: Сажетак онога чим сам се до сада бавио
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 stylesheet: ../css/profil.css
 add-image-links: 0
 add-figcaption: 0
+image: /img/preview-profil-strahinja-org.webp
+canonical: https://strahinja.org/profil/
+meta: index-meta.csv
 ---
 {include "../header"}
 {.splash}{.content}

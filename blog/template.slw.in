@@ -1,12 +1,17 @@
 ---
 lang: sr
 site-name: %TITLE% //strahinja.org
+site-desc: %SITEDESC%
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 title-heading-level: 1
 permalink-url: /%BASEDIR%/%FILENAME%
 add-footnote-div: 1
 add-article-header: 1
+image: /img/preview-blog-strahinja-org.webp
+canonical: https://strahinja.org/blog/%FILENAME%
+article-title: %TITLE% //strahinja.org
+meta: article-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

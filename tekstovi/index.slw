@@ -1,9 +1,13 @@
 ---
 lang: sr
 site-name: Текстови //strahinja.org
+site-desc: Списак текстова
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 stylesheet: ../css/tekstovi.css
+image: /img/preview-home-strahinja-org.webp
+canonical: https://strahinja.org/blog/
+meta: index-meta.csv
 ---
 {=textfile}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -22,6 +26,12 @@ stylesheet: ../css/tekstovi.css
 ## Математика
 
 {table.texts math}
+{thead}{tr}
+{th}{/th}
+{th}Опис{/th}
+{th.date}Написано{/th}
+{th.date}Ажурирано{/th}
+{/tr}{/thead}
 {tbody}
 {csv "tekstovi-matematika"}
 {tr.text}
@@ -42,6 +52,12 @@ $8
 ## Софтвер
 
 {table.texts software}
+{thead}{tr}
+{th}{/th}
+{th}Опис{/th}
+{th.date}Написано{/th}
+{th.date}Ажурирано{/th}
+{/tr}{/thead}
 {tbody}
 {csv "tekstovi-softver"}
 {tr.text}
