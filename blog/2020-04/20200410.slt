@@ -1,12 +1,17 @@
 ---
 lang: sr
 site-name: Локални PHP API и JWT, први део //strahinja.org
+site-desc: Савремени начин обезбеђивања API-ја
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 title-heading-level: 1
 permalink-url: /blog/2020-04/20200410
 add-footnote-div: 1
 add-article-header: 1
+image: /img/preview-blog-strahinja-org.webp
+canonical: https://strahinja.org/blog/20200410
+article-title: Локални PHP API и JWT, први део //strahinja.org
+meta: ../article-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

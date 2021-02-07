@@ -1,12 +1,17 @@
 ---
 lang: sr
 site-name: Nuxtpress //strahinja.org
+site-desc: Markdown и званично у Nuxt-у
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 title-heading-level: 1
 permalink-url: /blog/2020-06/20200624
 add-footnote-div: 1
 add-article-header: 1
+image: /img/preview-blog-strahinja-org.webp
+canonical: https://strahinja.org/blog/20200624
+article-title: Nuxtpress //strahinja.org
+meta: ../article-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

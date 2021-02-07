@@ -1,6 +1,7 @@
 ---
 lang: sr
 site-name: КАКОДА употребљавам ГНУ-ов систем за изградњу //strahinja.org
+site-desc: 
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
 stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
@@ -8,6 +9,10 @@ title-heading-level: 1
 permalink-url: /tekstovi/softver/gnu-szi
 add-footnote-div: 1
 add-article-header: 1
+image: /img/preview-home-strahinja-org.webp
+canonical: https://strahinja.org/tekstovi/gnu-szi
+article-title: КАКОДА употребљавам ГНУ-ов систем за изградњу //strahinja.org
+meta: ../article-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

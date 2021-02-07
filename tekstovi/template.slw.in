@@ -12,7 +12,7 @@ add-article-header: 1
 image: /img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/tekstovi/%FILENAME%
 article-title: %TITLE% //strahinja.org
-meta: article-meta.csv
+meta: ../article-meta.csv
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
