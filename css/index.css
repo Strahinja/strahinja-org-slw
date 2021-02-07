@@ -757,6 +757,13 @@ details>div>h2
     padding-top: .5em;
 }
 
+main>.content>hr,
+details>div>hr
+{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .heading-link,
 a.timestamp
 {
