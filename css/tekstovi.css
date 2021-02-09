@@ -1,11 +1,11 @@
 .texts
 {
     display: table;
-    background-color: #212121;
+    background-color: var(--background-elevated);
     border-spacing: 0;
     margin: 1em 0;
     margin-right: .75rem;
-    box-shadow: .7em .7em #000;
+    box-shadow: .7em .7em var(--shadow);
     align-self: stretch;
 }
 
@@ -26,7 +26,7 @@
 {
     border-radius: 50%;
     padding: .5em;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .description
@@ -52,8 +52,8 @@
 .description>h4
 {
     margin-bottom: 1em;
-    font-family: "Fira Sans Extra Condensed", sans-serif;
-    font-size: 16pt;
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size);
 }
 
 .description>h1 a,
@@ -61,7 +61,7 @@
 .description>h3 a,
 .description>h4 a
 {
-    color: #a3a383;
+    color: var(--anchor);
     text-decoration: none;
 }
 
@@ -70,8 +70,8 @@
 .description>h3 a:hover,
 .description>h4 a:hover
 {
-    background-color: #fff;
-    color: #121212;
+    background-color: var(--selected-background);
+    color: var(--selected-color);
 }
 
 main .content .text p

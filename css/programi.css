@@ -9,21 +9,24 @@
 {
     display: flex;
     flex-direction: row;
-    background-color: #212121;
+    background-color: var(--background-elevated);
     margin-bottom: 1em;
     padding: 1.5em 0;
 }
 
 .dates
 {
+    font-family: var(--date-font);
     font-size: 12pt;
-    font-weight: bold;
+    /*font-weight: bold;*/
     padding: 0 2rem;
 }
 
 .image
 {
-    background-color: #c0c0c0;
+    background-color: var(--background);
+    border: .7ex solid var(--primary-lighten2);
+    box-shadow: .25em .25em var(--shadow);
     width: 20em;
     min-width: 20em;
     height: 20em;
@@ -53,8 +56,8 @@
 .actions>.inactive-link 
 {
     display: inline;
-    background-color: #404040;
-    color: #c0c0c0;
+    background-color: var(--dim-text-background);
+    color: var(--dim-text-color);
     position: relative;
     cursor: not-allowed;
     padding: .6em 1em;
@@ -68,8 +71,8 @@
 .actions>a
 {
     display: inline-flex;
-    background-color: #374537;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--alt-text-color);
     position: relative;
     padding: 0 1em;
     margin: 0 .5em 0 0;
@@ -110,6 +113,7 @@
 
 @media (max-width: 900px)
 {
+
 .image
 {
     display: flex;
@@ -178,6 +182,7 @@
 .actions>.inactive-link
 {
     margin: 0;
+    padding: 0 1em;
 }
 }
 

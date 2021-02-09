@@ -53,11 +53,8 @@ meta: index-meta.csv
 нису :)), па неке могућности још нису додате или нису функционалне.  Молим за
 стрпљење, јер је време које могу да посветим изради овог сајта веома ограничено.
 
-## Новости
-
-{incdir "blog" 3 =chevron}
 {/.content}
-{.splash vpadded}{.columns}
+{.splash secondary vpadded}{.columns}
 {.column right}
 ## Програми
 
@@ -78,6 +75,11 @@ meta: index-meta.csv
 {/.button-accent}
 
 {/.column}{/.content}{/.splash}
+{.content}
+## Новости
+
+{incdir "blog" 3 =chevron}
+{/.content}
 {.splash notfilled}{.content centered}
 
 ## Коришћене технологије
