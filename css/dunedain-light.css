@@ -24,6 +24,7 @@
     --accent-contrast: #000;
     --background: #fff;
     --background-elevated: #eee;
+    --background-elevated2: #ddd;
     --error: #ff5252;
     --info: #2196f3;
     --success: #4caf50;
@@ -39,7 +40,7 @@
     --heading-color: var(--standout-color);
     --heading-font: "Fira Sans Extra Condensed", sans-serif;
     --header-background: var(--primary);
-    --header-color: var(--alt-text-color);
+    --header-color: var(--text-color);
     --header-hover-bg: var(--primary-lighten2);
     --header-hover-color: var(--text-color);
     --splash-background: var(--primary-lighten1);
@@ -55,7 +56,8 @@
     --footer-links-hover-bg: var(--primary-lighten2);
     --footer-links-hover-color: var(--text-color);
     --footer-bottom-text-bg: var(--primary-lighten1);
-    --blockquote-bar-color: var(--background-elevated);
+    --blockquote-background: var(--background-elevated);
+    --blockquote-bar-color: var(--background-elevated2);
     --shadow: rgba(0,0,0,.5);
     --table-background: var(--primary-lighten1);
     --table-row-background: var(--primary-lighten2);

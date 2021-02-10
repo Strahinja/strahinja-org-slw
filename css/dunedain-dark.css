@@ -30,6 +30,7 @@
     --accent-contrast: #000;
     --background: #121212;
     --background-elevated: #212121;
+    --background-elevated2: #313131;
     --error: #d45858;
     --info: #4592cf;
     --success: #69b069;
@@ -61,7 +62,8 @@
     --footer-links-hover-bg: var(--standout-color);
     --footer-links-hover-color: var(--secondary);
     --footer-bottom-text-bg: var(--secondary-darken1);
-    --blockquote-bar-color: var(--background-elevated);
+    --blockquote-background: var(--background-elevated);
+    --blockquote-bar-color: var(--background-elevated2);
     --shadow: #000;
     --table-background: var(--secondary-darken3);
     --table-row-background: var(--secondary-darken2);

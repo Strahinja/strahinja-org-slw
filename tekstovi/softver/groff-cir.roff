@@ -1,0 +1,354 @@
+.mso fira.tmac
+.ds ABSTRACT АПСТРАКТ
+.ds TOC Садржај
+.ds groff \fIgroff\fP
+.ds troff \fItroff\fP
+.ds bgroff \f[BI]groff\fP
+.ds Groff \fIGroff\fP
+.ds Troff \fITroff\fP
+.ds Bgroff \f[BI]Groff\fP
+.ds TeX T\h'-0.1667m'\v'+0.2m'E\v'-0.2m'\h'-0.125m'X
+.ds LaTeX L\h'-0.36m'\v'-0.2m'A\v'+0.2m'\h'-0.1667m'\*[TeX]
+.ds dot \[char46]
+.de EX
+.ID
+.CW
+.lg 0
+..
+.de EE
+.DE
+..
+.de B1E
+.sp
+.B1
+.EX
+.sp 2
+..
+.de B2E
+.sp 2
+.EE
+.B2
+.sp
+..
+.de B1I
+.sp
+.B1
+.ID
+.sp 2
+..
+.de B2I
+.sp 2
+.DE
+.B2
+.sp
+..
+.de B1L
+.sp
+.B1
+.LD
+.sp 2
+..
+.de B2L
+.sp 2
+.DE
+.B2
+.sp
+..
+.nr C1 2
+.nr VS 14p
+.
+.TL
+\*[Bgroff] на српском
+.
+.OH ''''
+.EH ''''
+.OF ''GROFF НА СРПСКОМ'%'
+.EF '%'GROFF НА СРПСКОМ''
+.
+.AU
+Страхиња Радић
+.
+.AI
+https://strahinja.org
+.
+.AB 
+Кратак увод у систем за слагање текста \*[groff] и опис начина на који се
+он може прилагодити раду на српском језику.
+.AE
+.
+.NH
+Шта је \*[bgroff]?
+.XS 
+Шта је \*[groff]?
+.XE
+.
+.LP
+\*[Groff] (GNU troff)\**
+.FS
+https://www.gnu.org/software/groff/manual/groff.html
+.FE
+је имплементација система за слагање текста \*[troff] која је написана од нуле у
+оквиру Пројекта ГНУ. \*[Troff] је један од првих система за слагање
+текста који је још средином шездесетих година XX века развила фирма \fIAT&T\fP
+за оперативни систем Уникс.  Идеја \*[troff]-а је слична оној иза \*[TeX]-а:
+документ се уноси у форми изворног кода који осим самог текста садржи и наредбе
+(у терминологији \*[troff]-а: \fBзахтеве\fP, \fI„requests“\fP) и макрое. Изворни
+код се преводи у формат погодан за штампу, обично \fIPostScript\fP или
+\fIPDF\fP, или се приказује на екрану. Ово је технички различито од текст
+процесора, као што су \fIMicrosoft Word\fP или \fILibreOffice Writer\fP, који
+следе принцип WYSIWYG \[en] \fIWhat you See Is What You Get\fP, односно
+„што видиш (на екрану), добићеш (и на штампачу)“.
+.PP
+За разлику од \*[TeX]-а, \*[groff] делује једноставније и брже. Можда најчешћа
+употреба \*[groff]-а је за форматирање \fIman\fP страница. Ово форматирање се
+врши директно из изворног кода, сваки пут када се позове наредба
+.B man (1)!
+.
+.SH
+Пример
+.
+.LP
+Изворни код:
+.
+.EX
+\*[dot]ce
+\*[dot]ps 12
+\*[dot]ft B
+First Document
+\*[dot]ft
+\*[dot]ps
+\*[dot]ce 0
+First line
+\*[dot]br
+Another line
+.EE
+.
+.LP
+ће произвести излаз сличан овоме:
+.
+.B1L
+.ce
+.ps 12
+.ft B
+First Document
+.ft
+.ps
+.ce 0
+.in +4
+First line
+.br
+Another line
+.in -4
+.B2L
+.
+.NH
+Проблем Уникода
+.XS 
+Проблем Уникода
+.XE
+.
+.LP
+Форматирање докумената на енглеском функционише тако како је, без додатних
+интервенција. Проблем настаје чим је потребно да се унесу посебни симболи или
+текст који није на енглеском. Рецимо, уколико покушамо да компајлирамо следећи
+документ (у стандарду UTF-8)
+.
+.EX
+\*[dot]ce
+Hello! Поздрав!
+.EE
+.
+.LP
+наредбом (\fIplain.roff\fP је назив фајла у ком смо сачували текст)
+.
+.EX
+$ \f[CB]groff plain.roff > plain.ps\fC
+.EE
+..
+.LP
+добићемо, вероватно неочекивано:
+.
+.B1L
+.ce
+Hello!  ÐÐ¾Ð·Ð´ÑÐ°Ð²!
+.B2L
+.
+.LP
+Ако сада позовемо \*[groff] са параметром \fC-k\fP, добићемо читав низ грешака
+сличних овима:
+.
+.EX
+.ps 9
+$ \f[CB]groff -k plain.roff > plain.ps\fC
+troff: plain.roff:2: warning: can't find special character 'u041F'
+troff: plain.roff:2: warning: can't find special character 'u043E'
+troff: plain.roff:2: warning: can't find special character 'u0437'
+troff: plain.roff:2: warning: can't find special character 'u0434'
+troff: plain.roff:2: warning: can't find special character 'u0440'
+troff: plain.roff:2: warning: can't find special character 'u0430'
+troff: plain.roff:2: warning: can't find special character 'u0432'
+.EE
+.
+.LP
+Иако \*[groff] може да обради текст у формату UTF-8, фонтови који су укључени у
+стандардну дистрибуцију \*[groff]-а не садрже ћириличне знаке, па је неопходно
+да се употребе фонтови који их садрже.
+.
+.NH
+Инсталација и конвертовање фонтова
+.XS
+Инсталација и конвертовање фонтова
+.XE
+.
+.LP
+Да би \*[groff] могао да употреби фонт, он мора бити у посебном формату, који се
+може добити конвертовањем фонтова у формату \fIPostScript Type\~1\fP програмом
+.B afmtodit (1). 
+Цео поступак подешавања вероватно изгледа нетривијално, али сетимо се да је то
+подешавање неопходно извршити само једном.
+.
+.PP
+У случају да немамо \fIPS Type\~1\fP фонтове, можемо их направити од фонтова у
+формату \fITrueType\fP уз помоћ програма
+.B ttf2pt1 (1).\**
+.FS
+Доступан на адреси\0
+.CW http://ttf2pt1.sourceforge.net
+.FE
+Рецимо, овај документ користи фонтове \fIFira Sans Condensed\fP и
+\fIFira Mono\fP, па ћу, илустрације ради, овде описати како се они подешавају за
+употребу у \*[groff]-у. Под неким дистрибуцијама система ГНУ са Линуксом, ови
+фонтови се налазе у посебним пакетима. Рецимо, у дистрибуцији \fIArtix\fP (а
+самим тим и \fIArch\fP), одговарајући пакети се зову \fIttf-fira-sans\fP и
+\fIttf-fira-mono\fP, и можемо их инсталирати наредбама
+.
+.EX
+$ \f[CB]su\fP
+# \f[CB]pacman -S ttf-fira-sans ttf-fira-mono\fC
+.EE
+.
+.LP
+(Под другим дистрибуцијама, пакети и наредба за инсталацију се могу
+разликовати.) Затим конвертујемо фонтове:
+.
+.EX
+$ \f[CB]mkdir -p font/devpdf && cd font\fP
+$ \f[CB]ttf2pt1 -a -e /usr/share/fonts/TTF/FiraSansCondensed-Regular.ttf \\
+    FiraSansCoR\fP
+$ \f[CB]afmtodit FiraSansCoR.afm textmap devpdf/FiraSansCoR\fP
+.EE
+.
+.LP
+Последње две наредбе поновимо за све фонтове које желимо да употребимо. То ће
+типично бити фонтови који у називу имају \fIItalic\fP, \fIBold\fP,
+\fIBoldItalic\fP, итд.
+.
+.PP
+Након овога, формирамо фајл \fIdevpdf/download\fP, који се састоји од редова
+који повезују назив фонта са називом фајла. Рецимо, за наведене фонтове фајл
+\fIdevpdf/download\fP ће садржати:
+.
+.EX
+	FiraMono-Bold	../FiraMonoB.pfa
+	FiraMono-Regular	../FiraMonoR.pfa
+	FiraSansCondensed-Bold	../FiraSansCoB.pfa
+	FiraSansCondensed-BoldItalic	../FiraSansCoBI.pfa
+	FiraSansCondensed-Italic	../FiraSansCoI.pfa
+	FiraSansCondensed-Regular	../FiraSansCoR.pfa
+.EE
+.
+.LP
+Назив фонта можемо добити из самог
+\fI.afm\fP фајла:
+.
+.EX
+$ \f[CB]grep FontName FiraSansCoR.afm\fP
+FontName FiraSansCondensed-Regular
+$
+.EE
+.
+.LP
+Пошто смо овако конвертовали све фонтове, можемо их ископирати у директоријум
+коме \*[groff] може да приступи. Локални фонтови треба да се инсталирају у
+директоријум \fI/usr/share/groff/site-font\fP, па ћемо имати (из директоријума
+који смо направили):
+.
+.EX
+$ \f[CB]su\fP
+# \f[CB]mkdir -p /usr/share/groff/site-font\fP
+# \f[CB]cp -r * /usr/share/groff/site-font\fP
+.EE
+.
+.LP
+Сада се тако инсталирани фонтови могу користити у \*[groff]-у.
+.
+.NH
+Употреба нестандардних фонтова
+.XS
+Употреба нестандардних фонтова
+.XE
+.
+.LP
+Због своје историје, \*[groff] има специфичан систем рада са фонтовима.  Број
+фонтова који могу да се користе је ограничен, и они се додељују бројевима.  Овај
+поступак се назива \fBмонтирање\fP фонтова, и изводи позивом захтева \fC.fp\fP:
+.
+.EX
+\*[dot]fp 2 I FiraSansCoI
+.EE
+.
+.LP
+За фонтове које смо додали имаћемо:
+.
+.EX
+\*[dot]fp 1 R FiraSansCoR
+\*[dot]fp 2 I FiraSansCoI
+\*[dot]fp 3 B FiraSansCoB
+\*[dot]fp 4 BI FiraSansCoBI
+\*[dot]fp 5 C FiraMonoR
+\*[dot]fp 6 CI FiraMonoR
+\*[dot]fp 7 CB FiraMonoB
+\*[dot]fp 8 CBI FiraMonoB
+.EE
+.
+.LP
+Укључивањем ових захтева на почетку документа, стандардни фонтови ће бити
+замењени задатим, па ће сада превођење протећи без проблема.
+.
+.NH
+Коначни облик наредбе
+.XS
+Коначни облик наредбе
+.XE
+.
+.LP
+На крају, треба напоменути да текућа верзија подразумеваног „излазног уређаја“
+\*[groff]-а, \fIps\fP, и поред овога неће произвести правилан \fIPostScript\fP
+излаз, па је потребно користити \fIpdf\fP излазни уређај. Коначни облик наредбе
+за добијање излазног документа је стога:
+.
+.EX
+$ \f[CB]groff -k -Tpdf plain.roff > plain.pdf\fP
+.EE
+.
+.LP
+чиме се од \fI.roff\fP документа добија \fI.pdf\fP документ.
+.
+.NH
+Лиценца (License)
+.XS
+Лиценца (License)
+.XE
+.
+.LP
+\[lq]Groff на српском\[rq] (Groff in Serbian) by Страхиња Радић (Strahinya
+Radich) is licensed under CC BY-SA\~4.0. To view a
+copy of this license, visit
+.ps 9
+\fChttps://creativecommons.org/licenses/by-sa/4.0\fP
+.
+.TC
+.OF ''''
+.EF ''''
+.\" vim: set filetype=groff:
+

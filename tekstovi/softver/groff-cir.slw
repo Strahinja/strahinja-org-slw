@@ -1,0 +1,223 @@
+---
+site-name: Groff на српском
+title: Groff на српском
+site-desc: Подешавање система за форматирање текста Groff за српски
+header-text: \[верзија 1.0, 10. фебруар 2021.]
+author: Страхиња Радић
+---
+
+{.abstract}
+Кратак увод у систем за слагање текста _groff_ и опис начина на који се он може
+прилагодити раду на српском језику.
+{/.abstract}
+
+{.left}
+
+| Формат        | Веза                              |
+|---------------|-----------------------------------|
+| Roff (архива) | [groff-cir.tar.xz][groffcirtarxz] |
+| PDF           | [groff-cir.pdf][groffcirpdf]      |
+
+{/.left}
+
+## Шта је _groff_?
+
+_Groff_ (GNU troff)[^groffweb] је имплементација система за слагање текста
+_troff_ која је написана од нуле у оквиру Пројекта ГНУ. _Troff_ је један од
+првих система за слагање текста који је још средином шездесетих година XX века
+развила фирма _AT&T_ за оперативни систем Уникс.  Идеја _troff_-а је слична оној
+иза _TeX_-а: документ се уноси у форми изворног кода који осим самог текста
+садржи и наредбе (у терминологији _troff_-а: **захтеве**, _„requests“_) и
+макрое. Изворни код се преводи у формат погодан за штампу, обично _PostScript_
+или _PDF_, или се приказује на екрану. Ово је технички различито од текст
+процесора, као што су _Microsoft Word_ или _LibreOffice Writer_, који следе
+принцип WYSIWYG — _What you See Is What You Get_, односно „што видиш (на
+екрану), добићеш (и на штампачу)“.
+
+За разлику од _TeX_-а, _groff_ делује једноставније и брже. Можда најчешћа
+употреба _groff_-а је за форматирање _man_ страница. Ово форматирање се врши
+директно из изворног кода, сваки пут када се позове наредба **man** (1)!
+
+### Пример
+
+Изворни код:
+
+```
+.ce
+.ps 12
+.ft B
+First Document
+.ft
+.ps
+.ce 0
+First line
+.br
+Another line
+```
+
+ће произвести излаз сличан овоме:
+
+> {.centered}**First Document**{/.centered}
+>
+>  First line  
+>  Another line
+
+## Проблем Уникода
+
+Форматирање докумената на енглеском функционише тако како је, без додатних
+интервенција. Проблем настаје чим је потребно да се унесу посебни симболи или
+текст који није на латиници. Рецимо, уколико покушамо да компајлирамо следећи
+документ (у стандарду UTF-8)
+
+```
+.ce
+Hello! Поздрав!
+```
+
+наредбом (_plain.roff_ је назив фајла у ком смо сачували текст)
+
+```
+\$ groff plain.roff > plain.ps
+```
+
+добићемо, вероватно неочекивано:
+
+> {.centered}Hello!  ÐÐ¾Ð·Ð´ÑÐ°Ð²!{/.centered}
+
+Ако сада позовемо _groff_ са параметром `-k`, добићемо читав низ грешака сличних
+овима:
+
+```
+\$ groff -k plain.roff > plain.ps
+troff: plain.roff:2: warning: can't find special character 'u041F'
+troff: plain.roff:2: warning: can't find special character 'u043E'
+troff: plain.roff:2: warning: can't find special character 'u0437'
+troff: plain.roff:2: warning: can't find special character 'u0434'
+troff: plain.roff:2: warning: can't find special character 'u0440'
+troff: plain.roff:2: warning: can't find special character 'u0430'
+troff: plain.roff:2: warning: can't find special character 'u0432'
+```
+
+Иако _groff_ може да обради текст у формату UTF-8, фонтови који су укључени у
+стандардну дистрибуцију _groff_-а не садрже ћириличне знаке, па је неопходно
+да се употребе фонтови који их садрже.
+
+## Инсталација и конвертовање фонтова
+
+Да би _groff_ могао да употреби фонт, он мора бити у посебном формату, који се
+може добити конвертовањем фонтова у формату _PostScript Type&nbsp;1_ програмом
+**afmtodit** (1).  Цео поступак подешавања вероватно изгледа нетривијално, али
+сетимо се да је то подешавање неопходно извршити само једном.
+
+У случају да немамо _PS Type&nbsp;1_ фонтове, можемо их направити од фонтова у
+формату _TrueType_ уз помоћ програма **ttf2pt1** (1).[^ttf2pt1] Рецимо, овај
+документ користи фонтове _Fira Sans Condensed_ и _Fira Mono_,[^firanap] па ћу,
+илустрације ради, овде описати како се они подешавају за употребу у _groff_-у.
+Под неким дистрибуцијама система ГНУ са Линуксом, ови фонтови се налазе у
+посебним пакетима. Рецимо, у дистрибуцији _Artix_ (а самим тим и _Arch_),
+одговарајући пакети се зову _ttf-fira-sans_ и _ttf-fira-mono_, и можемо их
+инсталирати наредбама
+
+```
+\$ su
+\# pacman -S ttf-fira-sans ttf-fira-mono
+```
+
+(Под другим дистрибуцијама, пакети и наредба за инсталацију се могу
+разликовати.) Затим конвертујемо фонтове:
+
+```
+\$ mkdir -p font/devpdf && cd font
+\$ ttf2pt1 -a -e /usr/share/fonts/TTF/FiraSansCondensed-Regular.ttf FiraSansCoR
+\$ afmtodit FiraSansCoR.afm textmap devpdf/FiraSansCoR
+```
+
+Последње две наредбе поновимо за све фонтове које желимо да употребимо. То ће
+типично бити фонтови који у називу имају _Italic_, _Bold_, _BoldItalic_, итд.
+
+Након овога, формирамо фајл _devpdf/download_, који се састоји од редова
+који повезују назив фонта са називом фајла. Рецимо, за наведене фонтове фајл
+_devpdf/download_ ће садржати:
+
+```
+	FiraMono-Bold	../FiraMonoB.pfa
+	FiraMono-Regular	../FiraMonoR.pfa
+	FiraSansCondensed-Bold	../FiraSansCoB.pfa
+	FiraSansCondensed-BoldItalic	../FiraSansCoBI.pfa
+	FiraSansCondensed-Italic	../FiraSansCoI.pfa
+	FiraSansCondensed-Regular	../FiraSansCoR.pfa
+```
+
+Назив фонта можемо добити из самог _.afm_ фајла:
+
+```
+\$ grep FontName FiraSansCoR.afm
+FontName FiraSansCondensed-Regular
+\$
+```
+
+Пошто смо овако конвертовали све фонтове, можемо их ископирати у директоријум
+коме _groff_ може да приступи. Локални фонтови треба да се инсталирају у
+директоријум _/usr/share/groff/site-font_, па ћемо имати (из директоријума
+који смо направили):
+
+```
+\$ su
+\# mkdir -p /usr/share/groff/site-font
+\# cp -r * /usr/share/groff/site-font
+```
+
+Сада се тако инсталирани фонтови могу користити у _groff_-у.
+
+## Употреба нестандардних фонтова
+
+Због своје историје, _groff_ има специфичан систем рада са фонтовима.  Број
+фонтова који могу да се користе је ограничен, и они се додељују бројевима.  Овај
+поступак се назива _монтирање_ фонтова, и изводи позивом захтева `.fp`:
+
+```
+.fp 2 I FiraSansCoI
+```
+
+За фонтове које смо додали имаћемо:
+
+```
+.fp 1 R FiraSansCoR
+.fp 2 I FiraSansCoI
+.fp 3 B FiraSansCoB
+.fp 4 BI FiraSansCoBI
+.fp 5 C FiraMonoR
+.fp 6 CI FiraMonoR
+.fp 7 CB FiraMonoB
+.fp 8 CBI FiraMonoB
+```
+
+Укључивањем ових захтева на почетку документа, стандардни фонтови ће бити
+замењени задатим, па ће сада превођење протећи без проблема.
+
+## Коначни облик наредбе
+
+На крају, треба напоменути да текућа верзија подразумеваног „излазног уређаја“
+_groff_-а, _ps_, и поред овога неће произвести правилан _PostScript_ излаз, па
+је потребно користити излазни уређај _pdf_. Коначни облик наредбе за добијање
+излазног документа је стога:
+
+```
+\$ groff -k -Tpdf plain.roff > plain.pdf
+```
+
+чиме се од _.roff_ документа добија _.pdf_ документ.
+
+## Лиценца (License)
+
+„Groff на српском“ (Groff in Serbian) by Страхиња Радић (Strahinya Radich) is
+licensed under CC BY-SA&nbsp;.0. To view a copy of this license, visit
+[https://creativecommons.org/licenses/by-sa/4.0](https://creativecommons.org/licenses/by-sa/4.0)
+
+[^groffweb]: `https://www.gnu.org/software/groff/manual/groff.html`
+[^ttf2pt1]: Доступан на адреси `http://ttf2pt1.sourceforge.net`.
+[^firanap]: Односи се на _PDF_ облик текста.
+
+[groffcirtarxz]: /tekstovi/softver/groff-cir.tar.xz
+[groffcirpdf]: /tekstovi/softver/groff-cir.pdf
+

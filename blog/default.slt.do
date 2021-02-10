@@ -1,4 +1,4 @@
-redo-ifchange template.slw.in
+redo-ifchange template.slw.in $2.slw
 YAML=$(sed -e '0,/^---/d' -e '/^---/,$d' $2.slw)
 DESCRIPTION=$(echo "${YAML}" | grep description: | sed -e 's/description: \+//g')
 SITENAME=$(echo "${YAML}" | grep site-name: | sed -e 's/site-name: \+//g')

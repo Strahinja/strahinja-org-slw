@@ -24,7 +24,7 @@ body
     flex-direction: column;
 }
 
-h1, h2, h3, h4, p
+h1, h2, h3, h4, p, .abstract
 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -105,12 +105,19 @@ li>p
 
 blockquote
 {
+    background-color: var(--blockquote-background);
     color: var(--dim-text-color);
     margin-left: 2em;
+    margin-right: 2em;
     border-left: .5em solid var(--blockquote-bar-color);
     padding: 1em;
     overflow-x: auto;
     max-width: 100%;
+}
+
+.abstract
+{
+    font-size: 12pt;
 }
 
 table
@@ -347,6 +354,16 @@ main>.content>header
     align-items: flex-start;
     box-shadow: none;
     z-index: initial;
+}
+
+details>div>header
+{
+    margin-top: 2em;
+}
+
+details>div>header:first-child
+{
+    margin-top: 0;
 }
 
 header>.content,
@@ -964,10 +981,22 @@ details[open]>div
 @media (max-width: 600px)
 {
 
-h1, h2, h3, h4, p
+h1, h2, h3, h4, p, .abstract
 {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+header>address
+{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.left>table
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 pre
@@ -979,6 +1008,7 @@ pre
 blockquote
 {
     margin-left: 1em;
+    margin-right: 1em;
 }
 
 main>.content>hr,
