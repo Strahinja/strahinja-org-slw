@@ -1,0 +1,12 @@
+:root
+{
+    --body-font: "Source Sans Pro", sans-serif;
+    --body-font-size: 1.1rem;
+    --large-font-size: 1.2rem;
+    --small-font-size: .9rem;
+    --tiny-font-size: .7rem;
+    --heading-font: "Fira Sans Extra Condensed", sans-serif;
+    --date-font:  "Fira Sans Extra Condensed", sans-serif;
+    --image-border-width: .3rem;
+}
+

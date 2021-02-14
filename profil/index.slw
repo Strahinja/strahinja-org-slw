@@ -16,7 +16,9 @@ meta: index-meta.csv
 # Страхиња Радић
 {/.content}{/.splash}
 {.splash-toolbar}{.content}
-![Страхиња Радић — фотографија][4]
+<div class="image" style="background-image: url('/img/avatar-2017.webp');">
+![Страхиња Радић — фотографија][avatar]
+</div>
 {/.content}{/.splash-toolbar}
 {main}
 {.content}
@@ -26,7 +28,7 @@ _Basic_-у деведесетих и научио низ програмских 
 најновије технологије, као што су _Nuxt.js, Vue.js, Angular 2, Typescript,
 JavaScript, PHP_ и _MySQL._ Мој циљ је да радим на занимљивим и захтевним
 пројектима уз употребу постојећих и нових технологија. Тренутни фокус:
-_C_ и [_suckless_ програми][1].
+_C_ и [_suckless_ програми][suckless].
 
 ## _GPG_ кључеви
 
@@ -36,17 +38,23 @@ _C_ и [_suckless_ програми][1].
 
 
 {.toolbar}{.content}
-[gmail.gpg][2]
+[gmail.gpg][gmailgpg]
 
-[strahinja-org.gpg][3]
+[strahinja-org.gpg][storggpg]
 {/.content}{/.toolbar}
+
+## Програми које користим
+
+Можете видети [списак програма које тренутно користим][prepor] и препоручујем на
+посебној страници.
 
 {/.content}
 {/main}
 {include "../footer"}
 
-[1]: https://suckless.org
-[2]: /gmail.gpg
-[3]: /strahinja-org.gpg
-[4]: /img/avatar-2017.webp
+[suckless]: https://suckless.org
+[gmailgpg]: /gmail.gpg
+[storggpg]: /strahinja-org.gpg
+[avatar]: /img/avatar-2017.webp
+[prepor]: /tekstovi/softver/preporuke
 

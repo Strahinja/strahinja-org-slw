@@ -1,21 +1,9 @@
 /* Dunedain dark 2.0 */
-/*
- *@media (prefers-color-scheme: dark),
- *@media (prefers-color-scheme: no-preference)
- *{
- */
 :root
 {
     --primary: #344334;
     --primary-lighten1: #677567;
     --primary-lighten2: #b3e3b3;
-
-    /*
-     *--secondary: #677567;
-     *--secondary-lighten1: #a6b5a6;
-     *--secondary-darken1: #374537;
-     *--secondary-darken2: #272927;
-     */
 
     --secondary: #333733;
     --secondary-darken1: #272927;
@@ -43,10 +31,9 @@
     --selected-color: var(--background);
 
     --heading-color: var(--standout-color);
-    --heading-font: "Fira Sans Extra Condensed", sans-serif;
-    --heading-font-size: 16pt;
     --header-background: var(--secondary-darken1);
     --header-color: var(--standout-color);
+    --header-alt-color: var(--standout-color);
     --header-hover-bg: var(--standout-color);
     --header-hover-color: var(--secondary-darken1);
     --splash-background: var(--secondary-darken2);
@@ -71,7 +58,7 @@
     --table-row-odd-background: var(--secondary-darken1);
     --table-row-odd-hover-bg: var(--secondary-darken1-hover);
     --scrollbar-track-bg: var(--primary-lighten1);
-    --scrollbar-thumb-bg: #fff;
+    --scrollbar-thumb-bg: var(--dim-text-color);
     --code-background: var(--secondary-darken2);
     --code-color: var(--primary-lighten2);
     --code-alt-color: var(--text-color);
@@ -80,6 +67,8 @@
     --kbd-font: "Fira Sans Extra Condensed", sans-serif;
     --kbd-border-color: var(--primary-lighten1);
     --code-border-color: var(--primary);
+    --image-border-inner: #fff;
+    --image-border-outer: #000;
     --figure-image-default-bg: #fff;
     --toolbar-link-bg: var(--primary);
     --toolbar-link-color: var(--standout-color);

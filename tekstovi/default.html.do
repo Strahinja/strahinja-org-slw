@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$2" == "index" ]; then
-    echo "template.slw.in $(for d in *-*; do
+    echo "template.slw.in tekstovi.csv $(for d in *-*; do
         if [ -d $d ]; then
             for f in $d/*.slw; do
                 [ -r $f ] && echo $f

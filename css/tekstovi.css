@@ -53,7 +53,7 @@
 {
     margin-bottom: 1em;
     font-family: var(--heading-font);
-    font-size: var(--heading-font-size);
+    font-size: 1em;
 }
 
 .description>h1 a,
@@ -151,6 +151,16 @@ th.date
 main .content .text p
 {
     margin-right: 1em;
+}
+
+.texts>thead
+{
+    display: none;
+}
+
+.text
+{
+    margin-bottom: 0;
 }
 
 .date

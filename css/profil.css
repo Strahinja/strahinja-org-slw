@@ -1,14 +1,23 @@
-.splash-toolbar>.content>img,
-main>.content>img
+.image
 {
-    display: block;
-    border: .7ex solid var(--primary-lighten2);
-    /*border-radius: 50%;*/
-    box-shadow: .25em .25em var(--shadow);
+    width: calc(96px + var(--image-border-width));
+    height: calc(96px + var(--image-border-width));
+    background-size: auto;
+    background-position: 50% 50%;
+    border: var(--image-border-width) solid var(--image-border);
+    box-shadow: 
+        inset 0 0 0 .1ex var(--image-border-outer),
+        inset 0 0 0 var(--image-border-width) var(--image-border-inner),
+        .25em .25em var(--shadow);
     align-self: center;
     justify-self: center;
-    margin-top: 2em;
-    margin-bottom: 1em;
+}
+
+.image>img
+{
+    padding: .25em;
+    visibility: hidden;
+    /*clip-path: polygon(var(--image-border-width) var(--image-border-width), var(--image-border-width) calc(100% - var(--image-border-width)), calc(100% - var(--image-border-width)) calc(100% - var(--image-border-width)), calc(100% - var(--image-border-width)) var(--image-border-width));*/
 }
 
 main

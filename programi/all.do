@@ -1,2 +1,2 @@
-redo-ifchange index.html
+redo-ifchange programi.csv index.html
 

@@ -38,9 +38,9 @@
     --selected-color: var(--background);
 
     --heading-color: var(--standout-color);
-    --heading-font: "Fira Sans Extra Condensed", sans-serif;
     --header-background: var(--primary);
-    --header-color: var(--text-color);
+    --header-color: var(--alt-text-color);
+    --header-alt-color: var(--text-color);
     --header-hover-bg: var(--primary-lighten2);
     --header-hover-color: var(--text-color);
     --splash-background: var(--primary-lighten1);
@@ -65,7 +65,7 @@
     --table-row-odd-background: var(--primary-lighten2-alt);
     --table-row-odd-hover-bg: var(--primary-lighten2-alt-hover);
     --scrollbar-track-bg: var(--primary-lighten1);
-    --scrollbar-thumb-bg: var(--primary);
+    --scrollbar-thumb-bg: var(--secondary);
     --code-background: var(--secondary-darken2);
     --code-color: var(--primary-lighten2);
     --code-alt-color: var(--secondary);
@@ -74,10 +74,11 @@
     --kbd-font: "Fira Sans Extra Condensed", sans-serif;
     --kbd-border-color: var(--primary-lighten1);
     --code-border-color: var(--primary);
+    --image-border-inner: #fff;
+    --image-border-outer: #000;
     --figure-image-default-bg: #fff;
     --toolbar-link-bg: var(--primary-lighten2);
     --toolbar-link-color: var(--text-color);
-    --date-font:  "Fira Sans Extra Condensed", sans-serif;
 }
 }
 

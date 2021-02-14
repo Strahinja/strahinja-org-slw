@@ -1,0 +1,94 @@
+---
+site-name: Програми које препоручујем
+title: Програми које препоручујем
+---
+
+## Оперативни систем
+
+{p}[Artix Linux][os] — дистрибуција оперативног система 
+[ГНУ са Линуксом][gnuorg] заснована на дистрибуцији [Arch Linux][arch], 
+али која [не користи systemd][systemd]. Ја користим [систем за контролу процеса
+и _init_ систем _s6_][s6], који сам инсталирао из „_base_“ _.iso_-а.{/p}
+
+## Менаџер прозора
+
+{p}[dwm][dwm] — део пројекта _suckless_. Ефикасан [_tiling_ менаџер
+прозора][tilingwm] без сувишних додатака.{/p}
+
+## Терминалски програм
+
+{p}[st][st] — део пројекта _suckless_. Терминалски програм без сувишних
+могућности.{/p}
+
+### Терминалски фонт
+
+{p}[Terminus][terminus] — јасан и компактан пикселски фонт, подржава доста
+знакова Уникода, укључујући и ћирилицу.{/p}
+
+## Уређивач текста
+
+1. [Vim][vim] — _Vi IMproved_, веома моћан уређивач текста настао као побољшана
+   верзија [традиционалног уређивача vi][vi]. Користим га за ситне измене,
+   рецимо када треба изменити неки конфигурациони фајл и одмах потом затворити
+   уређивач.
+
+2. [Neovim][neovim] — независна верзија _vim_-а настала због његове сувише споре
+   и конзервативне политике развоја. Користим га као _IDE_.
+
+## Систем за изградњу
+
+{p}[redo][redo] — систем сличан _make_-у, али далеко мањи, бржи и ефикаснији.{/p}
+
+## Програм за промену привилегија
+
+{p}[doas][doas] — програм за извршавање програма као други корисник (као
+_sudo_). За разлику од _sudo_-а, _doas_ је далеко једноставнији, без непотребних
+могућности, а самим тим и безбеднији.{/p}
+
+## Веб читач
+
+1. [Surf][surf] — део пројекта _suckless_. Графички веб читач заснован на погону
+   _Webkit_, без свега сувишног. Користи [dmenu][dmenu] за унос УРЛ-ова и
+   траку за претрагу. Подршка за табове се може додати преко везе са програмом
+   [tabbed][tabbed].
+
+2. [Ungoogled chromium][chromim] — ако вам је потребан веб читач са потпунијом
+   подршком за модерни (претрпани) веб, а [не волите Google-ов
+   надзор][digdeeper] (и надзор осталих сличних компанија), овај читач је за
+   сада најмање зло од постојећих. На претходном линку се детаљно објашњава
+   на који начин скоро сваки други веб читач, укључујући и оне који наводно
+   штите приватност, шпијунира кориснике. Такође постоји и [верзија за
+   Андроид][chromand], преко [F-Droid][fdroid] репозиторијума.
+
+## Клијент за мејл
+
+1. [Neomutt][neomutt] — у данашње време Гуглов _Gmail_ је толико узео маха, да
+   се готово изгубио појам „клијент за мејл“ и људи користе _Gmail_ као синоним
+   за програм за мејл. _Neomutt_ је текстуални, али потпун програм за мејл.
+   Подржава TLS, POP, IMAP, разне врсте _attachment_-а, GPG...
+
+2. [K-9 Mail][k9mail] — слободни клијент за мејл за Андроид.
+
+[gnuorg]: https://www.gnu.org
+[s6]: https://wiki.artixlinux.org/Main/S6
+[os]: https://artixlinux.org
+[systemd]: https://suckless.org/sucks/systemd
+[arch]: https://archlinux.org
+[tilingwm]: https://en.wikipedia.org/wiki/Tiling_window_manager
+[vim]: https://www.vim.org
+[vi]: https://en.wikipedia.org/wiki/vi
+[neovim]: https://neovim.io
+[surf]: https://surf.suckless.org/
+[neomutt]: https://neomutt.org
+[k9mail]: https://k9mail.app
+[chromim]: https://github.com/Eloston/ungoogled-chromium
+[dmenu]: https://tools.suckless.org/dmenu
+[tabbed]: https://tools.suckless.org/tabbed
+[digdeeper]: https://digdeeper.neocities.org/ghost/browsers.html
+[chromand]: https://uc.droidware.info
+[fdroid]: https://f-droid.org
+[st]: https://st.suckless.org
+[terminus]: http://terminus-font.sourceforge.net/
+[doas]: https://github.com/Duncaen/OpenDoas
+[redo]: https://github.com/apenwarr/redo
+
