@@ -69,26 +69,28 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 
 2. [K-9 Mail][k9mail] — слободни клијент за мејл за Андроид.
 
-[gnuorg]: https://www.gnu.org
-[s6]: https://wiki.artixlinux.org/Main/S6
-[os]: https://artixlinux.org
-[systemd]: https://suckless.org/sucks/systemd
+
 [arch]: https://archlinux.org
-[tilingwm]: https://en.wikipedia.org/wiki/Tiling_window_manager
-[vim]: https://www.vim.org
-[vi]: https://en.wikipedia.org/wiki/vi
-[neovim]: https://neovim.io
-[surf]: https://surf.suckless.org/
-[neomutt]: https://neomutt.org
-[k9mail]: https://k9mail.app
-[chromim]: https://github.com/Eloston/ungoogled-chromium
-[dmenu]: https://tools.suckless.org/dmenu
-[tabbed]: https://tools.suckless.org/tabbed
-[digdeeper]: https://digdeeper.neocities.org/ghost/browsers.html
 [chromand]: https://uc.droidware.info
-[fdroid]: https://f-droid.org
-[st]: https://st.suckless.org
-[terminus]: http://terminus-font.sourceforge.net/
+[chromim]: https://github.com/Eloston/ungoogled-chromium
+[digdeeper]: https://digdeeper.neocities.org/ghost/browsers.html
+[dmenu]: https://tools.suckless.org/dmenu
 [doas]: https://github.com/Duncaen/OpenDoas
+[dwm]: https://dwm.suckless.org
+[fdroid]: https://f-droid.org
+[gnuorg]: https://www.gnu.org
+[k9mail]: https://k9mail.app
+[neomutt]: https://neomutt.org
+[neovim]: https://neovim.io
+[os]: https://artixlinux.org
 [redo]: https://github.com/apenwarr/redo
+[s6]: https://wiki.artixlinux.org/Main/S6
+[st]: https://st.suckless.org
+[surf]: https://surf.suckless.org/
+[systemd]: https://suckless.org/sucks/systemd
+[tabbed]: https://tools.suckless.org/tabbed
+[terminus]: http://terminus-font.sourceforge.net/
+[tilingwm]: https://en.wikipedia.org/wiki/Tiling_window_manager
+[vi]: https://en.wikipedia.org/wiki/vi
+[vim]: https://www.vim.org
 
