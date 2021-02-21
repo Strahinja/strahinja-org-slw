@@ -60,6 +60,14 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
    штите приватност, шпијунира кориснике. Такође постоји и [верзија за
    Андроид][chromand], преко [F-Droid][fdroid] репозиторијума.
 
+### Додаци за веб читаче које користим
+
+1. [uMatrix][umatrix] — додатак за блокирање нежељеног садржаја, реклама и
+   праћења. Нажалост, овај додатак се више не одржава, али и даље ради.
+   Омогућава контролу над тим шта ће се учитавати, почевши од CSS-а па до
+   скриптова, колачића и других метода за праћење и сакупљање података о
+   кориснику.
+
 ## Клијент за мејл
 
 1. [Neomutt][neomutt] — у данашње време Гуглов _Gmail_ је толико узео маха, да
@@ -91,6 +99,7 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 [tabbed]: https://tools.suckless.org/tabbed
 [terminus]: http://terminus-font.sourceforge.net/
 [tilingwm]: https://en.wikipedia.org/wiki/Tiling_window_manager
+[umatrix]: https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf?hl=en
 [vi]: https://en.wikipedia.org/wiki/vi
 [vim]: https://www.vim.org
 
