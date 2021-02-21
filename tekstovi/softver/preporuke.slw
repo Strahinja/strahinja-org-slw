@@ -68,6 +68,10 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
    скриптова, колачића и других метода за праћење и сакупљање података о
    кориснику.
 
+2. [HTTPS Everywhere][httpsever] — захтева безбедни протокол HTTPS уместо HTTP
+   за сва учитавања. Приказује упозорење уместо навигације ако се захтева
+   учитавање небезбедног садржаја.
+
 ## Клијент за мејл
 
 1. [Neomutt][neomutt] — у данашње време Гуглов _Gmail_ је толико узео маха, да
@@ -87,6 +91,7 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 [dwm]: https://dwm.suckless.org
 [fdroid]: https://f-droid.org
 [gnuorg]: https://www.gnu.org
+[httpsever]: https://www.eff.org/https-everywhere
 [k9mail]: https://k9mail.app
 [neomutt]: https://neomutt.org
 [neovim]: https://neovim.io
