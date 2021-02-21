@@ -46,23 +46,23 @@
 {/=npm}
 {footer}
 {.links}
-[=github ][1]
-[=codepen ][2]
-[=npm ][3]
+[=github ][github]
+[=codepen ][codepen]
+[=npm ][npmjs]
 {/.links}
 {.bottom-text}
 {.content}
 {.license}
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img 
+<a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/"><img 
 alt="Creative Commons License" style="border-width:0" 
-src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png" /></a>
+src="/img/cc-by-nd-80x15.png" /></a>
 
 Unless explicitly noted otherwise, this page is licensed under a Creative
 Commons Attribution-NoDerivatives 4.0 International License.
 
 strahinja.org is licensed under a <a rel="license" 
-href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons 
+href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons 
 Attribution-NoDerivatives 4.0 International License</a>.
 
 Copyright © 1999-2021 Страхиња Радић (Strahinya Radich)
@@ -73,7 +73,7 @@ Copyright © 1999-2021 Страхиња Радић (Strahinya Radich)
 {/.bottom-text}
 {/footer}
 
-[1]: https://github.com/Strahinja
-[2]: https://codepen.io/Strahinja/
-[3]: https://www.npmjs.com/~strahinja
+[github]: https://github.com/Strahinja
+[codepen]: https://codepen.io/Strahinja/
+[npmjs]: https://www.npmjs.com/~strahinja
 
