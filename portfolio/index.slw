@@ -12,7 +12,7 @@ canonical: https://strahinja.org/portfolio/
 meta: index-meta.csv
 ---
 {include "../header"}
-{.splash}{.content}
+{.splash spacebefore}{.content}
 # Портфолио
 {/.content}{/.splash}
 {main}

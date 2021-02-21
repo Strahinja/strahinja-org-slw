@@ -7,5 +7,5 @@ for d in *-*; do
         done
     fi
 done | xargs redo-ifchange
-redo-ifchange index.html
+redo-ifchange index.html rss.xml
 

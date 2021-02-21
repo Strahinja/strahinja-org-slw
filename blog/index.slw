@@ -1,6 +1,7 @@
 ---
 lang: sr
 site-name: Блог //strahinja.org
+site-desc: Новости са strahinja.org-а
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 ext-in-permalink: 0
@@ -20,7 +21,7 @@ meta: index-meta.csv
     </svg>
 {/=chevron}
 {include "../header"}
-{.splash}{.content}
+{.splash spacebefore}{.content}
 # Блог
 {/.content}{/.splash}
 

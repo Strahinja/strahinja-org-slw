@@ -583,7 +583,16 @@ footer>.bottom-text>.content
     min-height: 10em;
     flex-direction: row;
     display: flex;
+}
+
+.splash.spacebefore
+{
     margin-top: 2rem;
+}
+
+.splash.spaceafter
+{
+    margin-bottom: 2rem;
 }
 
 .splash.secondary

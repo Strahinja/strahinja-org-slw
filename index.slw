@@ -38,7 +38,7 @@ meta: index-meta.csv
 </svg>
 {/=textbox}
 {include "header"}
-{.splash centered}{.content}
+{.splash centered spacebefore}{.content}
 # Лична страница Страхиње Радића
 {/.content}{/.splash}
 {.splash-toolbar}
@@ -54,7 +54,7 @@ meta: index-meta.csv
 стрпљење, јер је време које могу да посветим изради овог сајта веома ограничено.
 
 {/.content}
-{.splash secondary vpadded}{.columns}
+{.splash secondary spaceafter spacebefore vpadded}{.columns}
 {.column right}
 ## Програми
 

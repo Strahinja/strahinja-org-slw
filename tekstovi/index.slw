@@ -17,7 +17,7 @@ meta: index-meta.csv
 </svg>
 {/=textfile}
 {include "../header"}
-{.splash}{.content}
+{.splash spacebefore}{.content}
 # Текстови
 {/.content}{/.splash}
 {main}

@@ -11,7 +11,7 @@ canonical: https://strahinja.org/programi/
 meta: index-meta.csv
 ---
 {include "../header"}
-{.splash}{.content}
+{.splash spacebefore}{.content}
 # Програми
 {/.content}{/.splash}
 {main}

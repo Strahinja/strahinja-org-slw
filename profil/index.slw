@@ -12,7 +12,7 @@ canonical: https://strahinja.org/profil/
 meta: index-meta.csv
 ---
 {include "../header"}
-{.splash}{.content}
+{.splash spacebefore}{.content}
 # Страхиња Радић
 {/.content}{/.splash}
 {.splash-toolbar}{.content}
