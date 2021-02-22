@@ -1,2 +1,2 @@
-rm -f *~ *.html *-*/*.slt *-*/*.html
+rm -f *~ *.html *-*/*.slt *-*/*.html rss.xml
 

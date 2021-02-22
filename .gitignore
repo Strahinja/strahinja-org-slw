@@ -5,6 +5,7 @@
 *.rej
 *.swp
 *.html
+*.redo.tmp
 nohup.out
 highlight.css
 tekstovi/tekstovi-*.csv
