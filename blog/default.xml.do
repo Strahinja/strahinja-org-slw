@@ -8,8 +8,8 @@ cat <<EOT >>$3
 <atom:link href="https://strahinja.org/blog/rss.xml" rel="self" 
     type="application/rss+xml" />
 <link>https://strahinja.org/blog/rss.xml</link>
-<title>//strahinja.org — Лична страница Страхиње Радића</title>
-<description>Новости са strahinja.org-а</description>
+<title>//strahinja.org</title>
+<description>Новости са личне странице Страхиње Радића</description>
 <category>Blog</category>
 <language>sr-rs</language>
 <copyright>© 1999-2021 Страхиња Радић (Strahinya Radich)</copyright>

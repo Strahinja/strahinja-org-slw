@@ -12,6 +12,7 @@
     Redirect 410 /pomocy.php
     Redirect 410 /razno
     Redirect 410 /sitemap.xml
+    Redirect 410 /veze
     RedirectMatch 410 /tekstovi/razno.*
     Redirect 410 /doku/cv-strahinja-radic.pdf
     

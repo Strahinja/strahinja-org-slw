@@ -9,6 +9,8 @@ add-footnote-div: 1
 image: /img/preview-blog-strahinja-org.webp
 canonical: https://strahinja.org/blog/
 meta: index-meta.csv
+feed: /blog/rss.xml
+feed-desc: Новости са личне странице Страхиње Радића
 ---
 {=permalink}
 <svg style="width:24px;height:24px" viewBox="0 0 24 24">

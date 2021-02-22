@@ -4,8 +4,8 @@
 <atom:link href="https://strahinja.org/blog/rss.xml" rel="self" 
     type="application/rss+xml" />
 <link>https://strahinja.org/blog/rss.xml</link>
-<title>//strahinja.org — Лична страница Страхиње Радића</title>
-<description>Новости са strahinja.org-а</description>
+<title>//strahinja.org</title>
+<description>Новости са личне странице Страхиње Радића</description>
 <category>Blog</category>
 <language>sr-rs</language>
 <copyright>© 1999-2021 Страхиња Радић (Strahinya Radich)</copyright>
@@ -135,7 +135,10 @@
 <blockquote> <a href="https://strahinja.org/blog/rss.xml">https://strahinja.org/blog/rss.xml</a></blockquote>
 
 <p>и можете читати нове чланке (односно њихових првих неколико редова) са мог блога
-и без отварања веб читача. Препоручујем <a href="https://newsboat.org">Newsboat</a>.</p>]]></description>
+и без отварања веб читача. Препоручујем <a href="https://newsboat.org">Newsboat</a>.</p>
+
+<p><strong>Додатак 22.2.2021:</strong> Сада су чланци укључени у целости, са потпуним
+форматирањем. </p>]]></description>
     </item>
     <item>
         <title>Мој први npm пакет</title>
