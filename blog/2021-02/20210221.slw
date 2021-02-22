@@ -12,6 +12,9 @@ description: RSS фид поново на мојој страници
 и можете читати нове чланке (односно њихових првих неколико редова) са мог блога
 и без отварања веб читача. Препоручујем [Newsboat][newsboat].
 
+**Додатак 22.2.2021:** Сада су чланци укључени у целости, са потпуним
+форматирањем. 
+
 [newsboat]: https://newsboat.org
 [rss]: https://cyber.harvard.edu/rss/rss.html
 [rssxml]: https://strahinja.org/blog/rss.xml

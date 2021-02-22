@@ -22,16 +22,14 @@ for d in $(find *-* -type d | sort -r | head -n ${MONTHS}); do
             TITLE=$(echo "${YAML}" | grep title: | sed -e 's/title: \+//g')
             DATE=$(echo "${YAML}" | grep date: | sed -e 's/date: \+//g' \
                 | xargs -I{} date -R -d"{}")
-            DESCRIPTION=$(slweb -b $f | lynx -dump -stdin -raw | tail -n +5 \
-                | head -n ${LINES} | sed -e '/References/,$d' | head -n -1 \
-                | sed -e 's/</(/g' -e 's/>/)/g')
+            DESCRIPTION=$(slweb -b $f | tail -n +5 | sed -e '/References/,$d')
             cat <<EOT >>$3
     <item>
         <title>$TITLE</title>
         <link>https://strahinja.org/blog/$d/$(basename -s.slw $f)/</link>
         <guid>https://strahinja.org/blog/$d/$(basename -s.slw $f)/</guid>
         <pubDate>$DATE</pubDate>
-        <description>$DESCRIPTION (...)</description>
+        <description><![CDATA[$DESCRIPTION]]></description>
     </item>
 EOT
         done
