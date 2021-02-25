@@ -13,12 +13,13 @@ title: Програми које препоручујем
 ## Менаџер прозора
 
 {p}[dwm][dwm] — део пројекта _suckless_. Ефикасан [_tiling_ менаџер
-прозора][tilingwm] без сувишних додатака.{/p}
+прозора][tilingwm] без сувишних додатака. Поставио сам и [мој _fork_][mydwm]
+овог програма.{/p}
 
 ## Терминалски програм
 
 {p}[st][st] — део пројекта _suckless_. Терминалски програм без сувишних
-могућности.{/p}
+могућности. Поставио сам и [мој _fork_][myst].{/p}
 
 ### Терминалски фонт
 
@@ -35,6 +36,32 @@ title: Програми које препоручујем
 2. [Neovim][neovim] — независна верзија _vim_-а настала због његове сувише споре
    и конзервативне политике развоја. Користим га као _IDE_.
 
+### Додаци за _Neovim_
+
+Неки од додатака за _Neovim_ које тренутно користим су:
+
+1. [CoC][coc] — подршка за језички сервер (_LSP_)
+
+2. [vim-airline][vimairline] — улепшана статусна линија са исписом разних
+   информација у вези са фајлом који се уређује
+
+3. [fzf][fzf] + [fzf.vim][fzfvim] — систем за брзу претрагу разних листа, између
+   осталог и листе фајлова у свим поддиректоријумима, што омогућава веома брзо
+   отварање фајлова када се једном навикнете на тај начин рада
+
+3. [NERDCommenter][nerdcommenter] — додатак за управљање коментарима у изворном
+   коду
+
+4. [NERDTree][nerdtree] — приказује стабло фајлова у панелу слева, као у
+   _IDE_-у
+
+5. [Tabular][tabular] — додатак за уравнање текста као у табели
+
+6. [vim-css-color][vimcsscolor] — испис _CSS_ боја у изворном коду у тим бојама
+
+7. [benlight][benlight] — тамна тема која ми се тренутно највише свиђа; за
+   _vim_ користим [Zmrok][zmrok]
+
 ## Систем за изградњу
 
 {p}[redo][redo] — систем сличан _make_-у, али далеко мањи, бржи и ефикаснији.{/p}
@@ -50,7 +77,8 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 1. [Surf][surf] — део пројекта _suckless_. Графички веб читач заснован на погону
    _Webkit_, без свега сувишног. Користи [dmenu][dmenu] за унос УРЛ-ова и
    траку за претрагу. Подршка за табове се може додати преко везе са програмом
-   [tabbed][tabbed].
+   [tabbed][tabbed]. Поставио сам и [моје][mysurf] [_fork_-ове][mytabbed] ових
+   програма.
 
 2. [Ungoogled chromium][chromim] — ако вам је потребан веб читач са потпунијом
    подршком за модерни (претрпани) веб, а [не волите Google-ов
@@ -77,14 +105,19 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 1. [Neomutt][neomutt] — у данашње време Гуглов _Gmail_ је толико узео маха, да
    се готово изгубио појам „клијент за мејл“ и људи користе _Gmail_ као синоним
    за програм за мејл. _Neomutt_ је текстуални, али потпун програм за мејл.
-   Подржава TLS, POP, IMAP, разне врсте _attachment_-а, GPG...
+   Подржава TLS, POP, IMAP, разне врсте _attachment_-а, GPG... ја га користим уз
+   програм за преузимање поште [_isync_][isync] и програм за слање поште
+   [msmtp][msmtp], подешене преко скрипта [mutt-wizard][muttwizard].
+   
 
 2. [K-9 Mail][k9mail] — слободни клијент за мејл за Андроид.
 
 
 [arch]: https://archlinux.org
+[benlight]: https://github.com/kreeger/benlight
 [chromand]: https://uc.droidware.info
 [chromim]: https://github.com/Eloston/ungoogled-chromium
+[coc]: https://github.com/neoclide/coc.nvim
 [digdeeper]: https://digdeeper.neocities.org/ghost/browsers.html
 [dmenu]: https://tools.suckless.org/dmenu
 [doas]: https://github.com/Duncaen/OpenDoas
@@ -92,9 +125,18 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 [fdroid]: https://f-droid.org
 [gnuorg]: https://www.gnu.org
 [httpsever]: https://www.eff.org/https-everywhere
+[isync]: http://isync.sourceforge.net
 [k9mail]: https://k9mail.app
+[msmtp]: https://marlam.de/msmtp
+[muttwizard]: https://github.com/LukeSmithxyz/mutt-wizard
+[mydwm]: https://github.com/Strahinja/dwm
+[myst]: https://github.com/Strahinja/st
+[mysurf]: https://github.com/Strahinja/surf
+[mytabbed]: https://github.com/Strahinja/tabbed
 [neomutt]: https://neomutt.org
 [neovim]: https://neovim.io
+[nerdcommenter]: https://github.com/scrooloose/nerdcommenter
+[nerdtree]: https://github.com/preservim/nerdtree
 [os]: https://artixlinux.org
 [redo]: https://github.com/apenwarr/redo
 [s6]: https://wiki.artixlinux.org/Main/S6
@@ -102,9 +144,13 @@ _sudo_). За разлику од _sudo_-а, _doas_ је далеко једно
 [surf]: https://surf.suckless.org/
 [systemd]: https://suckless.org/sucks/systemd
 [tabbed]: https://tools.suckless.org/tabbed
+[tabular]: https://github.com/godlygeek/tabular
 [terminus]: http://terminus-font.sourceforge.net/
 [tilingwm]: https://en.wikipedia.org/wiki/Tiling_window_manager
 [umatrix]: https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf?hl=en
 [vi]: https://en.wikipedia.org/wiki/vi
 [vim]: https://www.vim.org
+[vimairline]: https://github.com/vim-airline/vim-airline
+[vimcsscolor]: https://github.com/ap/vim-css-color
+[zmrok]: https://github.com/vim-scripts/Zmrok
 
