@@ -1,5 +1,5 @@
+HEADERLINES=+5
 MONTHS=10
-LINES=20
 
 cat <<EOT >>$3
 <?xml version="1.0" encoding="UTF-8"?>
@@ -22,7 +22,7 @@ for d in $(find *-* -type d | sort -r | head -n ${MONTHS}); do
             TITLE=$(echo "${YAML}" | grep title: | sed -e 's/title: \+//g')
             DATE=$(echo "${YAML}" | grep date: | sed -e 's/date: \+//g' \
                 | xargs -I{} date -R -d"{}")
-            DESCRIPTION=$(slweb -b $f | tail -n +5 | sed -e '/References/,$d')
+            DESCRIPTION=$(slweb -b $f | tail -n ${HEADERLINES})
             cat <<EOT >>$3
     <item>
         <title>$TITLE</title>
