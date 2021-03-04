@@ -4,7 +4,7 @@ site-name: //strahinja.org
 site-desc: Лична страница Страхиње Радића
 stylesheet: css/index.css
 stylesheet: css/fonts.css
-image: /img/preview-home-strahinja-org.webp
+image: https://strahinja.org/img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/
 meta: index-meta.csv
 ---

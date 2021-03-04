@@ -6,7 +6,7 @@ stylesheet: ../css/fonts.css
 stylesheet: ../css/programi.css
 add-image-links: 0
 add-figcaption: 0
-image: /img/preview-home-strahinja-org.webp
+image: https://strahinja.org/img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/programi/
 meta: index-meta.csv
 ---

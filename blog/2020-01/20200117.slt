@@ -8,7 +8,7 @@ title-heading-level: 1
 permalink-url: /blog/2020-01/20200117
 add-footnote-div: 1
 add-article-header: 1
-image: /img/preview-blog-strahinja-org.webp
+image: https://strahinja.org/img/preview-blog-strahinja-org.webp
 canonical: https://strahinja.org/blog/2020-01/20200117
 article-title: Од Vim-а до IDE-а //strahinja.org
 meta: ../article-meta.csv

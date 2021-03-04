@@ -7,7 +7,7 @@ stylesheet: ../css/fonts.css
 stylesheet: ../css/portfolio.css
 add-image-links: 0
 add-figcaption: 0
-image: /img/preview-portfolio-strahinja-org.webp
+image: https://strahinja.org/img/preview-portfolio-strahinja-org.webp
 canonical: https://strahinja.org/portfolio/
 meta: index-meta.csv
 ---

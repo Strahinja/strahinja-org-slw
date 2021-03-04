@@ -8,7 +8,7 @@ title-heading-level: 1
 permalink-url: /%BASEDIR%/%FILENAME%
 add-footnote-div: 1
 add-article-header: 1
-image: /img/preview-blog-strahinja-org.webp
+image: https://strahinja.org/img/preview-blog-strahinja-org.webp
 canonical: https://strahinja.org/%BASEDIR%/%FILENAME%
 article-title: %TITLE% //strahinja.org
 meta: ../article-meta.csv

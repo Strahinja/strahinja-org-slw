@@ -5,7 +5,7 @@ site-desc: Списак текстова
 stylesheet: ../css/index.css
 stylesheet: ../css/fonts.css
 stylesheet: ../css/tekstovi.css
-image: /img/preview-home-strahinja-org.webp
+image: https://strahinja.org/img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/blog/
 meta: index-meta.csv
 ---

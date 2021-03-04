@@ -9,7 +9,7 @@ title-heading-level: 1
 permalink-url: /tekstovi/matematika/koord
 add-footnote-div: 1
 add-article-header: 1
-image: /img/preview-home-strahinja-org.webp
+image: https://strahinja.org/img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/tekstovi/koord
 article-title: Матрице преласка и хомогене координате //strahinja.org
 meta: ../article-meta.csv

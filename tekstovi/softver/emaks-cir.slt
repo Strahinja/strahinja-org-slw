@@ -9,7 +9,7 @@ title-heading-level: 1
 permalink-url: /tekstovi/softver/emaks-cir
 add-footnote-div: 1
 add-article-header: 1
-image: /img/preview-home-strahinja-org.webp
+image: https://strahinja.org/img/preview-home-strahinja-org.webp
 canonical: https://strahinja.org/tekstovi/emaks-cir
 article-title: КАКОДА подесим и користим ГНУ-ов Емакс за унос текста на српском //strahinja.org
 meta: ../article-meta.csv
