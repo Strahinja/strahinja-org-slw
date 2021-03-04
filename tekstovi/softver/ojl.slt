@@ -4,7 +4,7 @@ site-name: ГНУ-ова ОЈЛ //strahinja.org
 site-desc: 
 stylesheet: /css/index.css
 stylesheet: /css/fonts.css
-stylesheet: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
+stylesheet: /css/katex.min.css
 title-heading-level: 1
 permalink-url: /tekstovi/softver/ojl
 add-footnote-div: 1
