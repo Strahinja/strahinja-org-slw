@@ -1,6 +1,6 @@
 "Назив","Датум настанка","Датум измене","УРЛ","Слика","Опис"
-"slweb","11.11.2020","17.02.2021","https://github.com/Strahinja/slweb","/img/programi/c/slweb-001.webp","Једноставни статички генератор веб страна"
-"table","16.09.2020","21.02.2021","https://github.com/Strahinja/table","/img/programi/c/table-001.webp","Помоћни програм за форматирање и приказ CSV-а из командне линије"
+"slweb","11.11.2020","04.03.2021","https://github.com/Strahinja/slweb","/img/programi/c/slweb-001.webp","Једноставни статички генератор веб страна"
+"table","16.09.2020","04.03.2021","https://github.com/Strahinja/table","/img/programi/c/table-001.webp","Помоћни програм за форматирање и приказ CSV-а из командне линије"
 "Библиотека","12.01.1999","08.06.1999","/programi/paskal/Bibliote.zip","/img/programi/paskal/bibliote-02.webp","Програм за евиденцију књига у библиотеци (матурски рад)"
 "Frakt","11.07.2001","10.08.2001","/programi/paskal/frakt.zip","/img/programi/paskal/frakt-01.webp","Програм за цртање фрактала: FRAKT.EXE = Паскал + BGI графика; FRK.EXE = Паскал + Асемблер. Број итерација: око 20 даје детаљне фрактале. +/- = зумирање/одзумирање; ←/↑/→/↓ (на нумеричкој),односно 4/8/6/2 = померање"
 "Hangman","14.07.1999","16.09.1999","/programi/paskal/Hangman.zip","/img/programi/paskal/hangman-01.webp","Игра погађања речи"
