@@ -1,0 +1,38 @@
+---
+title: Sourcehut
+date: 2021-03-09T16:46:00.000Z+0100
+description: Једноставнији сервис за управљање изворним кодом
+---
+
+Данас сам направио копије репозиторијума мојих програма [slweb][slweb] и
+[table][table] на сервису [sourcehut][sourcehut]. Уколико ми се овај начин
+хостовања мојих програма свиди, могуће је да и трајно пребацим све пројекте са
+_Github_-а на _sourcehut_. Предности _sourcehut_-а над _Github_-ом су очигледне:
+
+- _sourcehut_ покреће [софтвер][sourcehutsource] који је потпуно отвореног
+  изворног кода
+
+- на веб страницама _sourcehut_-а се не користи _JavaScript_; могуће им је
+  приступити и преко програма [lynx][lynx], [links][links] и [elinks][elinks]!
+
+- не зависи од великих корпорација, већ од корисника који ће услуге
+  _sourcehut_-а плаћати (када изађе из алфа верзије)
+
+- [_sourcehut pages_][sourcehutpages] ће 
+  [блокирати Гугл аналитику и _CloudFlare_][srhpblog], што је велики плус за
+  приватност
+
+Једини минус за сада је то што ће се услуге _sourcehut_-а наплаћивати једном кад
+пројекат изађе из алфа верзије. Ипак, свако ће моћи да доприноси постојећим
+пројектима и без налога на _sourcehut_-у, јер је за то довољан мејл.
+
+[elinks]: http://elinks.or.cz
+[links]: http://links.twibright.com
+[lynx]: https://lynx.browser.org
+[slweb]: https://git.sr.ht/~strahinja/slweb
+[sourcehut]: https://sourcehut.org
+[sourcehutpages]: https://srht.site/
+[sourcehutsource]: https://sr.ht/~sircmpwn/sourcehut/
+[srhpblog]: https://sourcehut.org/blog/2021-02-18-sourcehut-pages/
+[table]: https://git.sr.ht/~strahinja/table
+

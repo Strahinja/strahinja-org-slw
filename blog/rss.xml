@@ -10,6 +10,35 @@
 <language>sr-rs</language>
 <copyright>© 1999-2021 Страхиња Радић (Strahinya Radich)</copyright>
     <item>
+        <title>Sourcehut</title>
+        <link>https://strahinja.org/blog/2021-03/20210309/</link>
+        <guid>https://strahinja.org/blog/2021-03/20210309/</guid>
+        <pubDate>Tue, 09 Mar 2021 16:46:00 +0100</pubDate>
+        <description><![CDATA[
+<p>Данас сам направио копије репозиторијума мојих програма <a href="https://git.sr.ht/~strahinja/slweb">slweb</a> и
+<a href="https://git.sr.ht/~strahinja/table">table</a> на сервису <a href="https://sourcehut.org">sourcehut</a>. Уколико ми се овај начин
+хостовања мојих програма свиди, могуће је да и трајно пребацим све пројекте са
+<em>Github</em>-а на <em>sourcehut</em>. Предности <em>sourcehut</em>-а над <em>Github</em>-ом су очигледне:</p>
+
+<ul>
+<li><p><em>sourcehut</em> покреће <a href="https://sr.ht/~sircmpwn/sourcehut/">софтвер</a> који је потпуно отвореног
+  изворног кода</p>
+</li>
+<li><p>на веб страницама <em>sourcehut</em>-а се не користи <em>JavaScript</em>; могуће им је
+  приступити и преко програма <a href="https://lynx.browser.org">lynx</a>, <a href="http://links.twibright.com">links</a> и <a href="http://elinks.or.cz">elinks</a>!</p>
+</li>
+<li><p>не зависи од великих корпорација, већ од корисника који ће услуге
+  <em>sourcehut</em>-а плаћати (када изађе из алфа верзије)</p>
+</li>
+<li><p><a href="https://srht.site/"><em>sourcehut pages</em></a> ће 
+  <a href="https://sourcehut.org/blog/2021-02-18-sourcehut-pages/">блокирати Гугл аналитику и <em>CloudFlare</em></a>, што је велики плус за
+  приватност</p>
+</li></ul>
+<p>Једини минус за сада је то што ће се услуге <em>sourcehut</em>-а наплаћивати једном кад
+пројекат изађе из алфа верзије. Ипак, свако ће моћи да доприноси постојећим
+пројектима и без налога на <em>sourcehut</em>-у, јер је за то довољан мејл.</p>]]></description>
+    </item>
+    <item>
         <title>Корак ка једноставном</title>
         <link>https://strahinja.org/blog/2021-02/20210207/</link>
         <guid>https://strahinja.org/blog/2021-02/20210207/</guid>
@@ -802,67 +831,6 @@ this.filename.length==0
 
 <p>
 </p>]]></description>
-    </item>
-    <item>
-        <title>Нови почетак ✨</title>
-        <link>https://strahinja.org/blog/2019-10/20191026/</link>
-        <guid>https://strahinja.org/blog/2019-10/20191026/</guid>
-        <pubDate>Sat, 26 Oct 2019 02:00:00 +0200</pubDate>
-        <description><![CDATA[
-<p>Данас сам завршио следећу етапу у развоју моје личне странице, преласком на нови
-<em>engine</em> који развијам учећи <a href="https://nuxtjs.org"><em>Nuxt.js</em></a>. Истовремено, морао сам да
-трајно или привремено уклоним доста ствари које нису прилагођене новом систему.
-Неки статички чланци, као што је <a href="https://strahinja.org/tekstovi/softver/ojl-3.0.html">мој превод ОЈЛ</a> (<a href="https://strahinja.org/tekstovi/softver/ojl-2.0.html">и верзије 2</a>),
-су остали.</p>
-
-<p>Поново планирам вођење веб дневника, тј. „блога“. Овај пут сам се одлучио да
-чланке пишем у <em>Markdown</em>-у који се трансформише у <em>HTML</em> са могућношћу
-коришћења <em>Vue.js</em> тагова компонената, дакле нечему што више личи на <em>Vue.js</em>
-<em>template</em> него на чист <em>HTML</em>. Предност овог приступа можда није очита, али то
-омогућава најразличитије динамичке додатке, почевши од компоненте која би
-омогућавала додавање анкета, па све до компоненте за исцртавање фрактала или
-приказивање <em>ASCII art</em>-а.</p>
-
-<p>Са друге стране, <em>Markdown</em> је веома практичан као језик за писање чланака, што
-знају сви који су имали прилике да коментаришу на <a href="https://stackoverflow.com"><em>Stack Overflow</em></a>-у
-или пишу <code>README.md</code> документ на <a href="https://github.org"><em>GitHub</em></a>-у. Његова основна идеја је да
-буде што ближи ономе како бисмо текст „форматирали“ у обичном <code>.txt</code> документу,
-за разлику од <em>HTML</em>-а и других језика за означавање. У ери текстуалних
-терминала се курзив писао уз помоћ подвлака (<code>_</code>) а полуцрна слова уз помоћ
-<a href="#inline-footnote-1" id="inline-footnote-text-1"><sup>1</sup></a> звездица (<code>*</code>):</p>
-
-<pre>
-Да _нађемо_ и **изнађемо** решење.
-</pre>
-
-<p>што производи: „Да <em>нађемо</em> и <strong>изнађемо</strong> решење.“</p>
-
-<p>Верзија <em>Markdown</em>-а коју користим садржи и уводни део сваког чланка у <em>YAML</em>-у,
-који се назива <em>Frontmatter</em> и даје могућност да се и мета-тагови задају у
-формату читљивом људима. Тако овај чланак почиње на следећи начин:</p>
-
-<pre>
----
-title: Нови почетак ✨
-date: 2019-10-26T0:00:00.000Z
-categories:
-  - опште
-  - ажурирања сајта
-tags:
-  - Nuxt.js
-  - Markdown
----
-</pre>
-
-<p><em>Engine</em> који развијам даље организује чланке на основу ових ознака.</p>
-
-
-<p>
-
-</p>
-
-<hr />
-<p id="inline-footnote-1"><a href="#inline-footnote-text-1">1.</a> Jедноструких звездица, али нећемо ситничарити.</p>]]></description>
     </item>
 </channel>
 </rss>
